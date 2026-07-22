@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as LocationsRouteImport } from './routes/locations'
 import { Route as IndustriesRouteImport } from './routes/industries'
@@ -31,6 +32,11 @@ import { Route as IndustriesGeneralContractorsRouteImport } from './routes/indus
 import { Route as IndustriesEngineeringFirmsRouteImport } from './routes/industries.engineering-firms'
 import { Route as IndustriesElectricalContractorsRouteImport } from './routes/industries.electrical-contractors'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -149,6 +155,7 @@ export interface FileRoutesByFullPath {
   '/industries': typeof IndustriesRouteWithChildren
   '/locations': typeof LocationsRouteWithChildren
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industries/electrical-contractors': typeof IndustriesElectricalContractorsRoute
   '/industries/engineering-firms': typeof IndustriesEngineeringFirmsRoute
   '/industries/general-contractors': typeof IndustriesGeneralContractorsRoute
@@ -172,6 +179,7 @@ export interface FileRoutesByTo {
   '/industries': typeof IndustriesRouteWithChildren
   '/locations': typeof LocationsRouteWithChildren
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industries/electrical-contractors': typeof IndustriesElectricalContractorsRoute
   '/industries/engineering-firms': typeof IndustriesEngineeringFirmsRoute
   '/industries/general-contractors': typeof IndustriesGeneralContractorsRoute
@@ -196,6 +204,7 @@ export interface FileRoutesById {
   '/industries': typeof IndustriesRouteWithChildren
   '/locations': typeof LocationsRouteWithChildren
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industries/electrical-contractors': typeof IndustriesElectricalContractorsRoute
   '/industries/engineering-firms': typeof IndustriesEngineeringFirmsRoute
   '/industries/general-contractors': typeof IndustriesGeneralContractorsRoute
@@ -221,6 +230,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/locations'
     | '/services'
+    | '/sitemap.xml'
     | '/industries/electrical-contractors'
     | '/industries/engineering-firms'
     | '/industries/general-contractors'
@@ -244,6 +254,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/locations'
     | '/services'
+    | '/sitemap.xml'
     | '/industries/electrical-contractors'
     | '/industries/engineering-firms'
     | '/industries/general-contractors'
@@ -267,6 +278,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/locations'
     | '/services'
+    | '/sitemap.xml'
     | '/industries/electrical-contractors'
     | '/industries/engineering-firms'
     | '/industries/general-contractors'
@@ -291,10 +303,18 @@ export interface RootRouteChildren {
   IndustriesRoute: typeof IndustriesRouteWithChildren
   LocationsRoute: typeof LocationsRouteWithChildren
   ServicesRoute: typeof ServicesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -502,7 +522,18 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesRoute: IndustriesRouteWithChildren,
   LocationsRoute: LocationsRouteWithChildren,
   ServicesRoute: ServicesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
