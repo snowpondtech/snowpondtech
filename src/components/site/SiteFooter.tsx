@@ -85,6 +85,7 @@ export function SiteFooter() {
                 Blog
               </a>
             </li>
+            <li><Link to="/privacy-policy" className="text-white/80 hover:text-white">Privacy Policy</Link></li>
           </ul>
           <Link
             to="/contact"

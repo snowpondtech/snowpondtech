@@ -1,6 +1,7 @@
+import { Link } from "@tanstack/react-router";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
-import { CheckCircle2, Mail, MapPin, Phone } from "lucide-react";
+import { CheckCircle2, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/contact")({
@@ -19,6 +20,7 @@ export const Route = createFileRoute("/contact")({
           "Call 207-692-2415 or send a message. Locally owned in Oakland, Maine — serving contractors and manufacturers across Central and Southern Maine.",
       },
       { property: "og:url", content: "/contact" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
@@ -107,6 +109,24 @@ function ContactPage() {
                     placeholder="Tell us what's going on — downtime, cybersecurity, growth planning, insurance requirements, or something else."
                   />
                 </div>
+                <div className="grid gap-2">
+                  <label className="flex items-start gap-2 text-sm text-foreground cursor-pointer" htmlFor="consent">
+                    <input
+                      type="checkbox"
+                      id="consent"
+                      name="consent"
+                      required
+                      className="mt-0.5 h-4 w-4 rounded border-border text-brand focus:ring-brand"
+                    />
+                    <span>
+                      I agree to the{" "}
+                      <Link to="/privacy-policy" className="text-brand hover:underline">
+                        Privacy Policy
+                      </Link>
+                      .
+                    </span>
+                  </label>
+                </div>
                 <button
                   type="submit"
                   className="mt-2 inline-flex items-center justify-center rounded-md bg-brand px-6 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep"
@@ -131,25 +151,39 @@ function ContactPage() {
                   <Mail className="h-4 w-4 text-brand" /> info@snowpondtech.com
                 </a>
                 <p className="flex items-center gap-3 text-muted-foreground">
-                  <MapPin className="h-4 w-4 text-brand" /> Oakland, Maine
+                  <MapPin className="h-4 w-4 text-brand" /> 54 Main St, Ste 2B, Oakland, ME 04963
+                </p>
+                <p className="flex items-start gap-3 text-muted-foreground">
+                  <Clock className="h-4 w-4 text-brand mt-0.5" />
+                  <span>
+                    8am to 5pm Eastern Time<br />
+                    Monday to Friday<br />
+                    Closed all federal holidays
+                  </span>
                 </p>
               </div>
             </div>
             <div className="rounded-2xl border border-border overflow-hidden">
               <div className="aspect-[4/3] bg-brand-soft">
                 <iframe
-                  title="Snow Pond Tech service area map"
+                  title="Snow Pond Tech office location"
                   className="w-full h-full"
                   loading="lazy"
-                  src="https://www.google.com/maps?q=Oakland,+Maine&output=embed"
+                  src="https://www.google.com/maps?q=54+Main+St,+Ste+2B,+Oakland,+ME+04963&output=embed"
                 />
               </div>
               <div className="p-5">
-                <p className="font-semibold text-foreground">Service area</p>
+                <p className="font-semibold text-foreground">Office location</p>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Waterville · Augusta · Newport · Bangor · Lewiston · Auburn · Brunswick · Portland · Biddeford
+                  54 Main St, Ste 2B, Oakland, ME 04963
                 </p>
               </div>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-6">
+              <p className="font-semibold text-foreground">Service area</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Waterville · Augusta · Newport · Bangor · Lewiston · Auburn · Brunswick · Portland · Biddeford
+              </p>
             </div>
           </div>
         </div>
