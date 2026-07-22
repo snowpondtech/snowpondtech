@@ -12,7 +12,7 @@ import logo from "@/assets/snowpond-logo.png.asset.json";
 const nav = [
   { to: "/services", label: "Services" },
   { to: "/industries/hvac-contractors", label: "Industries", match: "/industries" },
-  { to: "/locations/portland", label: "Locations", match: "/locations" },
+  { to: "/locations", label: "Locations", match: "/locations" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
