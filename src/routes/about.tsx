@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { CTASection } from "../components/site/CTASection";
 import { Handshake, HeartHandshake, MapPin, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { LinkedInIcon } from "../components/site/SocialIcons";
 import ownerHeadshot from "@/assets/owner-headshot.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
@@ -83,12 +84,23 @@ function AboutPage() {
               My goal is simple: provide responsive, practical IT support that helps business owners focus on running their
               business instead of dealing with technology problems.
             </p>
-            <a
-              href="tel:2076922415"
-              className="mt-6 inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep"
-            >
-              Call 207-692-2415
-            </a>
+            <div className="mt-6 flex flex-col sm:flex-row gap-3">
+              <a
+                href="tel:2076922415"
+                className="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep"
+              >
+                Call 207-692-2415
+              </a>
+              <a
+                href="https://www.linkedin.com/in/joshuazukerman/"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center justify-center gap-2 rounded-md border border-border bg-white px-5 py-3 text-sm font-semibold text-foreground hover:bg-white/80"
+              >
+                <LinkedInIcon className="h-4 w-4" />
+                Connect on LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </section>

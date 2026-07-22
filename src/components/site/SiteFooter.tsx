@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 import logo from "@/assets/snowpond-logo.png.asset.json";
+import { FacebookIcon, InstagramIcon, LinkedInIcon, XIcon } from "./SocialIcons";
 
 const industries = [
   ["hvac-contractors", "HVAC Contractors"],
@@ -45,6 +46,47 @@ export function SiteFooter() {
             <p className="flex items-center gap-2 text-white/70">
               <MapPin className="h-4 w-4" /> Oakland, Maine
             </p>
+          </div>
+          <div className="mt-6">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white/60">Follow us</h4>
+            <div className="mt-3 flex items-center gap-3">
+              <a
+                href="https://facebook.com/snowpondtech"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Facebook"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-white/20 hover:text-white transition-colors"
+              >
+                <FacebookIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://instagram.com/snowpondtech"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Instagram"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-white/20 hover:text-white transition-colors"
+              >
+                <InstagramIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://x.com/snowpondtech"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="X"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-white/20 hover:text-white transition-colors"
+              >
+                <XIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/snow-pond-technology-group-inc./"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="LinkedIn"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/80 hover:bg-white/20 hover:text-white transition-colors"
+              >
+                <LinkedInIcon className="h-4 w-4" />
+              </a>
+            </div>
           </div>
         </div>
 
