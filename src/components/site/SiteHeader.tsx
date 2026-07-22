@@ -8,11 +8,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/snowpond-logo.png.asset.json";
+import { INDUSTRIES } from "@/data/industries";
+import { LOCATIONS } from "@/data/locations";
 
-const nav = [
+const primaryNav = [
   { to: "/services", label: "Services" },
-  { to: "/industries/hvac-contractors", label: "Industries", match: "/industries" },
-  { to: "/locations", label: "Locations", match: "/locations" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
@@ -35,7 +35,60 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-foreground/80">
-          {nav.map((n) => (
+          <Link
+            to="/services"
+            className="hover:text-brand transition-colors"
+            activeProps={{ className: "text-brand" }}
+          >
+            Services
+          </Link>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger className="inline-flex items-center gap-1 outline-none hover:text-brand transition-colors">
+              Industries <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="flex flex-col min-w-[16rem]">
+              <DropdownMenuItem asChild>
+                <Link to="/industries" className="cursor-pointer font-semibold">
+                  All Industries
+                </Link>
+              </DropdownMenuItem>
+              {INDUSTRIES.map((i) => (
+                <DropdownMenuItem key={i.slug} asChild>
+                  <Link to={`/industries/${i.slug}`} className="cursor-pointer">
+                    {i.name}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+              <DropdownMenuItem asChild>
+                <Link to="/industries/additional-industries" className="cursor-pointer">
+                  Additional Industries
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger className="inline-flex items-center gap-1 outline-none hover:text-brand transition-colors">
+              Locations <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="flex flex-col min-w-[14rem]">
+              <DropdownMenuItem asChild>
+                <Link to="/locations" className="cursor-pointer font-semibold">
+                  All Locations
+                </Link>
+              </DropdownMenuItem>
+              {LOCATIONS.map((l) => (
+                <DropdownMenuItem key={l.slug} asChild>
+                  <Link to={`/locations/${l.slug}`} className="cursor-pointer">
+                    {l.city}, Maine
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          {primaryNav.slice(1).map((n) => (
             <Link
               key={n.to}
               to={n.to}
@@ -45,6 +98,7 @@ export function SiteHeader() {
               {n.label}
             </Link>
           ))}
+
           <DropdownMenu>
             <DropdownMenuTrigger className="inline-flex items-center gap-1 outline-none hover:text-brand transition-colors">
               Client Resources <ChevronDown className="h-4 w-4" />
@@ -102,17 +156,81 @@ export function SiteHeader() {
 
       {open && (
         <div className="lg:hidden border-t border-border bg-background">
-          <div className="container-page py-4 flex flex-col gap-3">
-            {nav.map((n) => (
+          <div className="container-page py-4 flex flex-col gap-1">
+            <Link
+              to="/services"
+              onClick={() => setOpen(false)}
+              className="py-2 text-base font-medium text-foreground"
+            >
+              Services
+            </Link>
+
+            <div className="pt-2 border-t border-border flex flex-col">
+              <div className="py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Industries
+              </div>
               <Link
-                key={n.to}
-                to={n.to}
+                to="/industries"
                 onClick={() => setOpen(false)}
-                className="py-2 text-base font-medium text-foreground"
+                className="py-1.5 text-sm font-semibold text-foreground"
               >
-                {n.label}
+                All Industries
               </Link>
-            ))}
+              {INDUSTRIES.map((i) => (
+                <Link
+                  key={i.slug}
+                  to={`/industries/${i.slug}`}
+                  onClick={() => setOpen(false)}
+                  className="py-1.5 text-sm text-foreground/80"
+                >
+                  {i.name}
+                </Link>
+              ))}
+              <Link
+                to="/industries/additional-industries"
+                onClick={() => setOpen(false)}
+                className="py-1.5 text-sm text-foreground/80"
+              >
+                Additional Industries
+              </Link>
+            </div>
+
+            <div className="pt-2 border-t border-border flex flex-col">
+              <div className="py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Locations
+              </div>
+              <Link
+                to="/locations"
+                onClick={() => setOpen(false)}
+                className="py-1.5 text-sm font-semibold text-foreground"
+              >
+                All Locations
+              </Link>
+              {LOCATIONS.map((l) => (
+                <Link
+                  key={l.slug}
+                  to={`/locations/${l.slug}`}
+                  onClick={() => setOpen(false)}
+                  className="py-1.5 text-sm text-foreground/80"
+                >
+                  {l.city}, Maine
+                </Link>
+              ))}
+            </div>
+
+            <div className="pt-2 border-t border-border flex flex-col">
+              {primaryNav.slice(1).map((n) => (
+                <Link
+                  key={n.to}
+                  to={n.to}
+                  onClick={() => setOpen(false)}
+                  className="py-2 text-base font-medium text-foreground"
+                >
+                  {n.label}
+                </Link>
+              ))}
+            </div>
+
             <div className="pt-2 border-t border-border flex flex-col">
               <div className="py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 Client Resources
@@ -130,6 +248,7 @@ export function SiteHeader() {
                 </a>
               ))}
             </div>
+
             <a
               href="https://blog.snowpondtech.com"
               className="py-2 text-base font-medium text-foreground"
