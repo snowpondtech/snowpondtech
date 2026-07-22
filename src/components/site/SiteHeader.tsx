@@ -1,6 +1,12 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, Phone, X } from "lucide-react";
+import { ChevronDown, ExternalLink, Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logo from "@/assets/snowpond-logo.png.asset.json";
 
 const nav = [
@@ -9,6 +15,14 @@ const nav = [
   { to: "/locations/portland", label: "Locations", match: "/locations" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
+];
+
+const clientResources = [
+  {
+    href: "https://snowpondtech.itclientportal.com/ClientPortal/Login.aspx",
+    label: "Client Portal",
+  },
+  { href: "https://remote.snowpondtech.com", label: "Remote Support" },
 ];
 
 export function SiteHeader() {
@@ -31,6 +45,26 @@ export function SiteHeader() {
               {n.label}
             </Link>
           ))}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="inline-flex items-center gap-1 outline-none hover:text-brand transition-colors">
+              Client Resources <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              {clientResources.map((item) => (
+                <DropdownMenuItem key={item.href} asChild>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center justify-between gap-3 cursor-pointer"
+                  >
+                    {item.label}
+                    <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
+                  </a>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
           <a
             href="https://blog.snowpondtech.com"
             className="hover:text-brand transition-colors"
@@ -79,6 +113,23 @@ export function SiteHeader() {
                 {n.label}
               </Link>
             ))}
+            <div className="pt-2 border-t border-border">
+              <div className="py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Client Resources
+              </div>
+              {clientResources.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="py-2 inline-flex items-center gap-2 text-base font-medium text-foreground"
+                >
+                  {item.label}
+                  <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
+                </a>
+              ))}
+            </div>
             <a
               href="https://blog.snowpondtech.com"
               className="py-2 text-base font-medium text-foreground"
