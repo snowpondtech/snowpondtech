@@ -64,7 +64,7 @@ export function IndustryPage({ industry }: { industry: Industry }) {
       </section>
 
       <CTASection
-        title={`Ready to see what better technology could do for your ${industry.short.toLowerCase()} business?`}
+        title={`Ready to see what better technology could do for your ${lower(industry.short)} business?`}
         subtitle="Book a free technology assessment. No sales pressure, no jargon — just a clear conversation about what's working and what isn't."
       />
     </>
