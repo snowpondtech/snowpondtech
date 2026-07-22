@@ -168,7 +168,7 @@ function AdditionalIndustriesPage() {
               We help businesses implement practical technology solutions that reduce downtime, improve security, and support long-term growth — without unnecessary complexity or confusing technical jargon.
             </p>
             <Link
-              to="/contact"
+              to="/schedule-assessment"
               className="mt-6 inline-flex items-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
             >
               Schedule a Free Technology Assessment
@@ -246,7 +246,7 @@ function AdditionalIndustriesPage() {
               Let's start with a conversation about your goals, challenges, and technology needs.
             </p>
             <Link
-              to="/contact"
+              to="/schedule-assessment"
               className="mt-6 inline-flex items-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
             >
               Schedule a Free Technology Assessment

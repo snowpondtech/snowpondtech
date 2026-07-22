@@ -63,7 +63,7 @@ export function LocationPage({ location }: { location: Location }) {
                 Oakland-based · On-site support and strategic guidance across {location.region}.
               </p>
               <Link
-                to="/contact"
+                to="/schedule-assessment"
                 className="mt-5 inline-flex items-center justify-center rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-brand-foreground hover:bg-brand-deep w-full"
               >
                 Schedule Free Assessment

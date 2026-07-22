@@ -88,7 +88,7 @@ export function SiteFooter() {
             <li><Link to="/privacy-policy" className="text-white/80 hover:text-white">Privacy Policy</Link></li>
           </ul>
           <Link
-            to="/contact"
+            to="/schedule-assessment"
             className="mt-6 inline-flex items-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-brand-deep hover:bg-white/90"
           >
             Free Technology Assessment
