@@ -49,14 +49,14 @@ export function SiteHeader() {
             <DropdownMenuTrigger className="inline-flex items-center gap-1 outline-none hover:text-brand transition-colors">
               Client Resources <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
+            <DropdownMenuContent align="end" className="flex flex-col">
               {clientResources.map((item) => (
                 <DropdownMenuItem key={item.href} asChild>
                   <a
                     href={item.href}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="inline-flex items-center justify-between gap-3 cursor-pointer"
+                    className="flex items-center justify-between gap-3 cursor-pointer"
                   >
                     {item.label}
                     <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
