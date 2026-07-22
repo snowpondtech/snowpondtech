@@ -1,8 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { CTASection } from "../components/site/CTASection";
 import {
   Activity,
+  ArrowRight,
   Cloud,
   Cog,
   Compass,
@@ -11,10 +12,26 @@ import {
   LifeBuoy,
   Lock,
   Mail,
+  Phone,
   ShieldCheck,
   GraduationCap,
   Server,
 } from "lucide-react";
+
+type ServiceItem = {
+  icon: React.ComponentType<{ className?: string }>;
+  name: string;
+  desc: string;
+  to?: string;
+};
+
+type ServiceGroup = {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  tag: string;
+  body: string;
+  items: ServiceItem[];
+};
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -38,7 +55,8 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
 });
 
-const groups = [
+
+const groups: ServiceGroup[] = [
   {
     icon: Headphones,
     title: "Keep Your Business Running",
@@ -48,6 +66,15 @@ const groups = [
       { icon: LifeBuoy, name: "IT Support", desc: "Real humans, quick response, and clear communication when something breaks." },
       { icon: Activity, name: "Monitoring", desc: "Proactive monitoring of your systems so we catch issues before they cost you." },
       { icon: Cog, name: "Vendor Management", desc: "We handle your ISP, phone system, software, and hardware vendors so you don't have to." },
+    ],
+  },
+  {
+    icon: Phone,
+    title: "Communicate Better",
+    tag: "Voice & messaging",
+    body: "Modern phone and VoIP systems that keep office, field, and remote teams connected — and customers reaching the right person.",
+    items: [
+      { icon: Phone, name: "Business Communications", desc: "Cloud phone systems, VoIP, mobile calling, and unified messaging built for Maine contractors and manufacturers.", to: "/services/business-communications" },
     ],
   },
   {
@@ -108,16 +135,25 @@ function ServicesPage() {
                 <h2 className="mt-5 text-3xl font-semibold text-foreground">{group.title}</h2>
                 <p className="mt-3 text-muted-foreground leading-relaxed">{group.body}</p>
               </div>
-              <div className="grid gap-4 sm:grid-cols-3">
-                {group.items.map((item) => (
-                  <div key={item.name} className="rounded-2xl border border-border bg-card p-6">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand/10 text-brand">
-                      <item.icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="mt-4 text-base font-semibold text-foreground">{item.name}</h3>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                  </div>
-                ))}
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {group.items.map((item) => {
+                  const Wrapper = item.to ? Link : "div";
+                  const wrapperProps = item.to
+                    ? { to: item.to, className: "group rounded-2xl border border-border bg-card p-6 hover:border-brand transition" }
+                    : { className: "rounded-2xl border border-border bg-card p-6" };
+                  return (
+                    <Wrapper key={item.name} {...wrapperProps}>
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand/10 text-brand">
+                        <item.icon className="h-5 w-5" />
+                      </div>
+                      <h3 className="mt-4 text-base font-semibold text-foreground inline-flex items-center gap-2">
+                        {item.name}
+                        {item.to && <ArrowRight className="h-3.5 w-3.5 text-brand opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />}
+                      </h3>
+                      <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                    </Wrapper>
+                  );
+                })}
               </div>
             </div>
           ))}
