@@ -65,27 +65,6 @@ const SEGMENTS: Segment[] = [
     ],
   },
   {
-    icon: HeartHandshake,
-    name: "Nonprofit Organizations",
-    intro:
-      "Nonprofits rely on technology to support their missions, manage donor information, coordinate staff and volunteers, and communicate with stakeholders. We help nonprofit organizations maximize the value of their technology investments while keeping systems secure and reliable.",
-    challenges: [
-      "Limited technology budgets",
-      "Small administrative teams",
-      "Data security concerns",
-      "Remote and mobile workforce support",
-      "Aging technology infrastructure",
-    ],
-    help: [
-      "Technology planning and budgeting",
-      "Microsoft 365 implementation and management",
-      "Cybersecurity services",
-      "Backup and recovery solutions",
-      "User support and training",
-      "Cloud migration services",
-    ],
-  },
-  {
     icon: Users,
     name: "Small and Mid-Sized Businesses (10–50 Employees)",
     intro:

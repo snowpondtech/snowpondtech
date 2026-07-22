@@ -17,8 +17,6 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
-import { Route as LocationsIndexRouteImport } from './routes/locations.index'
-import { Route as IndustriesIndexRouteImport } from './routes/industries.index'
 import { Route as ServicesBusinessCommunicationsRouteImport } from './routes/services.business-communications'
 import { Route as LocationsWatervilleRouteImport } from './routes/locations.waterville'
 import { Route as LocationsPortlandRouteImport } from './routes/locations.portland'
@@ -76,16 +74,6 @@ const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => ServicesRoute,
-} as any)
-const LocationsIndexRoute = LocationsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const IndustriesIndexRoute = IndustriesIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => IndustriesRoute,
 } as any)
 const ServicesBusinessCommunicationsRoute =
   ServicesBusinessCommunicationsRouteImport.update({
@@ -205,14 +193,14 @@ export interface FileRoutesByFullPath {
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
-  '/industries/': typeof IndustriesIndexRoute
-  '/locations/': typeof LocationsIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/industries': typeof IndustriesRouteWithChildren
+  '/locations': typeof LocationsRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industries/additional-industries': typeof IndustriesAdditionalIndustriesRoute
   '/industries/electrical-contractors': typeof IndustriesElectricalContractorsRoute
@@ -231,8 +219,6 @@ export interface FileRoutesByTo {
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
-  '/industries': typeof IndustriesIndexRoute
-  '/locations': typeof LocationsIndexRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
@@ -261,8 +247,6 @@ export interface FileRoutesById {
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
-  '/industries/': typeof IndustriesIndexRoute
-  '/locations/': typeof LocationsIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
@@ -292,14 +276,14 @@ export interface FileRouteTypes {
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
-    | '/industries/'
-    | '/locations/'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
+    | '/industries'
+    | '/locations'
     | '/sitemap.xml'
     | '/industries/additional-industries'
     | '/industries/electrical-contractors'
@@ -318,8 +302,6 @@ export interface FileRouteTypes {
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
-    | '/industries'
-    | '/locations'
     | '/services'
   id:
     | '__root__'
@@ -347,8 +329,6 @@ export interface FileRouteTypes {
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
-    | '/industries/'
-    | '/locations/'
     | '/services/'
   fileRoutesById: FileRoutesById
 }
@@ -419,20 +399,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/services/'
       preLoaderRoute: typeof ServicesIndexRouteImport
       parentRoute: typeof ServicesRoute
-    }
-    '/locations/': {
-      id: '/locations/'
-      path: '/'
-      fullPath: '/locations/'
-      preLoaderRoute: typeof LocationsIndexRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/industries/': {
-      id: '/industries/'
-      path: '/'
-      fullPath: '/industries/'
-      preLoaderRoute: typeof IndustriesIndexRouteImport
-      parentRoute: typeof IndustriesRoute
     }
     '/services/business-communications': {
       id: '/services/business-communications'
@@ -564,7 +530,6 @@ interface IndustriesRouteChildren {
   IndustriesHvacContractorsRoute: typeof IndustriesHvacContractorsRoute
   IndustriesLandscapingContractorsRoute: typeof IndustriesLandscapingContractorsRoute
   IndustriesManufacturingRoute: typeof IndustriesManufacturingRoute
-  IndustriesIndexRoute: typeof IndustriesIndexRoute
 }
 
 const IndustriesRouteChildren: IndustriesRouteChildren = {
@@ -575,7 +540,6 @@ const IndustriesRouteChildren: IndustriesRouteChildren = {
   IndustriesHvacContractorsRoute: IndustriesHvacContractorsRoute,
   IndustriesLandscapingContractorsRoute: IndustriesLandscapingContractorsRoute,
   IndustriesManufacturingRoute: IndustriesManufacturingRoute,
-  IndustriesIndexRoute: IndustriesIndexRoute,
 }
 
 const IndustriesRouteWithChildren = IndustriesRoute._addFileChildren(
@@ -592,7 +556,6 @@ interface LocationsRouteChildren {
   LocationsNewportRoute: typeof LocationsNewportRoute
   LocationsPortlandRoute: typeof LocationsPortlandRoute
   LocationsWatervilleRoute: typeof LocationsWatervilleRoute
-  LocationsIndexRoute: typeof LocationsIndexRoute
 }
 
 const LocationsRouteChildren: LocationsRouteChildren = {
@@ -605,7 +568,6 @@ const LocationsRouteChildren: LocationsRouteChildren = {
   LocationsNewportRoute: LocationsNewportRoute,
   LocationsPortlandRoute: LocationsPortlandRoute,
   LocationsWatervilleRoute: LocationsWatervilleRoute,
-  LocationsIndexRoute: LocationsIndexRoute,
 }
 
 const LocationsRouteWithChildren = LocationsRoute._addFileChildren(
