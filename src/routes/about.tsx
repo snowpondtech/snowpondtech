@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { CTASection } from "../components/site/CTASection";
 import { Handshake, HeartHandshake, MapPin, ShieldCheck, Sparkles, Users } from "lucide-react";
+import ownerHeadshot from "@/assets/owner-headshot.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -67,15 +68,20 @@ function AboutPage() {
             </div>
           </div>
           <div className="rounded-3xl border border-border bg-brand-soft/60 p-8 lg:p-10">
-            <p className="font-display text-2xl font-semibold text-foreground">Meet the owner</p>
+            <img
+              src={ownerHeadshot.url}
+              alt="Joshua Zukerman, owner of Snow Pond Technology Group"
+              className="mx-auto h-64 w-64 rounded-2xl object-cover shadow-lg"
+            />
+            <p className="mt-6 font-display text-2xl font-semibold text-foreground">Meet the owner</p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Snow Pond Tech is led by a Maine-based owner with a background in business technology and a deep respect for
-              the trades and manufacturers who make this state work. Every client engagement includes direct access to
-              ownership — not a layer of account managers between you and the people making decisions.
+              Hi, I'm Joshua Zukerman, owner of Snow Pond Technology Group. I help contractors, manufacturers, and small
+              businesses across Central and Southern Maine reduce downtime, improve cybersecurity, and get more value from
+              their technology.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Full owner biography and photo coming soon. In the meantime, the fastest way to get to know us is a
-              30-minute discovery call.
+              My goal is simple: provide responsive, practical IT support that helps business owners focus on running their
+              business instead of dealing with technology problems.
             </p>
             <a
               href="tel:2076922415"
