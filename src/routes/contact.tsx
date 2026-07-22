@@ -180,6 +180,13 @@ function ContactPage() {
               </div>
             </div>
             <div className="rounded-2xl border border-border bg-card p-6">
+              <p className="font-semibold text-foreground">Mailing address</p>
+              <p className="mt-2 flex items-start gap-3 text-sm text-muted-foreground">
+                <Building2 className="h-4 w-4 text-brand mt-0.5" />
+                <span>325 Main St, Ste 116, Waterville, ME 04901</span>
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-6">
               <p className="font-semibold text-foreground">Service area</p>
               <p className="mt-1 text-sm text-muted-foreground">
                 Waterville · Augusta · Newport · Bangor · Lewiston · Auburn · Brunswick · Portland · Biddeford
