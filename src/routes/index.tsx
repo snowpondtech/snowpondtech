@@ -93,7 +93,7 @@ function HomePage() {
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
             <Link
-              to="/contact"
+              to="/schedule-assessment"
               className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-brand-deep hover:bg-white/90"
             >
               Schedule a Free Technology Assessment <ArrowRight className="h-4 w-4" />
@@ -158,7 +158,7 @@ function HomePage() {
                 </p>
               </div>
               <Link
-                to="/contact"
+                to="/schedule-assessment"
                 className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:gap-2.5 transition-all"
               >
                 Book your assessment <ArrowRight className="h-4 w-4" />

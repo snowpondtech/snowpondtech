@@ -130,7 +130,7 @@ export function SiteHeader() {
             207-692-2415
           </a>
           <Link
-            to="/contact"
+            to="/schedule-assessment"
             className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-brand-foreground shadow-sm hover:bg-brand-deep transition-colors"
           >
             Free Assessment
@@ -239,7 +239,7 @@ export function SiteHeader() {
               <Phone className="h-4 w-4" /> 207-692-2415
             </a>
             <Link
-              to="/contact"
+              to="/schedule-assessment"
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex justify-center rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-brand-foreground"
             >

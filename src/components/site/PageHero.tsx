@@ -27,7 +27,7 @@ export function PageHero({
         {children ?? (
           <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <Link
-              to="/contact"
+              to="/schedule-assessment"
               className="inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-semibold text-brand-deep hover:bg-white/90"
             >
               Schedule a Free Technology Assessment
