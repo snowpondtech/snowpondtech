@@ -15,11 +15,12 @@ export function CTASection({
         <p className="mx-auto mt-5 max-w-2xl text-white/80 text-lg">{subtitle}</p>
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <Link
-            to="/contact"
+            to="/schedule-assessment"
             className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-semibold text-brand-deep hover:bg-white/90"
           >
             <CalendarCheck className="h-4 w-4" /> Schedule a Free Technology Assessment
           </Link>
+
           <a
             href="tel:2076922415"
             className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
