@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as ScheduleAssessmentRouteImport } from './routes/schedule-assessment'
 import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as LocationsRouteImport } from './routes/locations'
 import { Route as IndustriesRouteImport } from './routes/industries'
@@ -44,6 +45,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleAssessmentRoute = ScheduleAssessmentRouteImport.update({
+  id: '/schedule-assessment',
+  path: '/schedule-assessment',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
@@ -181,6 +187,7 @@ export interface FileRoutesByFullPath {
   '/industries': typeof IndustriesRouteWithChildren
   '/locations': typeof LocationsRouteWithChildren
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/schedule-assessment': typeof ScheduleAssessmentRoute
   '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industries/additional-industries': typeof IndustriesAdditionalIndustriesRoute
@@ -209,6 +216,7 @@ export interface FileRoutesByTo {
   '/industries': typeof IndustriesRouteWithChildren
   '/locations': typeof LocationsRouteWithChildren
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/schedule-assessment': typeof ScheduleAssessmentRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industries/additional-industries': typeof IndustriesAdditionalIndustriesRoute
   '/industries/electrical-contractors': typeof IndustriesElectricalContractorsRoute
@@ -237,6 +245,7 @@ export interface FileRoutesById {
   '/industries': typeof IndustriesRouteWithChildren
   '/locations': typeof LocationsRouteWithChildren
   '/privacy-policy': typeof PrivacyPolicyRoute
+  '/schedule-assessment': typeof ScheduleAssessmentRoute
   '/services': typeof ServicesRouteWithChildren
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industries/additional-industries': typeof IndustriesAdditionalIndustriesRoute
@@ -267,6 +276,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/locations'
     | '/privacy-policy'
+    | '/schedule-assessment'
     | '/services'
     | '/sitemap.xml'
     | '/industries/additional-industries'
@@ -295,6 +305,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/locations'
     | '/privacy-policy'
+    | '/schedule-assessment'
     | '/sitemap.xml'
     | '/industries/additional-industries'
     | '/industries/electrical-contractors'
@@ -322,6 +333,7 @@ export interface FileRouteTypes {
     | '/industries'
     | '/locations'
     | '/privacy-policy'
+    | '/schedule-assessment'
     | '/services'
     | '/sitemap.xml'
     | '/industries/additional-industries'
@@ -351,6 +363,7 @@ export interface RootRouteChildren {
   IndustriesRoute: typeof IndustriesRouteWithChildren
   LocationsRoute: typeof LocationsRouteWithChildren
   PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  ScheduleAssessmentRoute: typeof ScheduleAssessmentRoute
   ServicesRoute: typeof ServicesRouteWithChildren
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -369,6 +382,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule-assessment': {
+      id: '/schedule-assessment'
+      path: '/schedule-assessment'
+      fullPath: '/schedule-assessment'
+      preLoaderRoute: typeof ScheduleAssessmentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy-policy': {
@@ -615,6 +635,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndustriesRoute: IndustriesRouteWithChildren,
   LocationsRoute: LocationsRouteWithChildren,
   PrivacyPolicyRoute: PrivacyPolicyRoute,
+  ScheduleAssessmentRoute: ScheduleAssessmentRoute,
   ServicesRoute: ServicesRouteWithChildren,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }

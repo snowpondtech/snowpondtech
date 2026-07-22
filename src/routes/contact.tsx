@@ -1,8 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
+import { Turnstile } from "../components/site/Turnstile";
 import { Building2, CheckCircle2, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
+
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -71,10 +73,37 @@ function ContactPage() {
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
+                  const form = e.currentTarget;
+                  const hp = (form.elements.namedItem("website") as HTMLInputElement | null)?.value;
+                  if (hp) {
+                    setSent(true);
+                    return;
+                  }
                   setSent(true);
                 }}
                 className="grid gap-5"
               >
+                {/* Honeypot — hidden from users, tempting to bots */}
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    left: "-9999px",
+                    width: 1,
+                    height: 1,
+                    overflow: "hidden",
+                  }}
+                >
+                  <label htmlFor="website">Website (leave blank)</label>
+                  <input
+                    id="website"
+                    name="website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div className="grid sm:grid-cols-2 gap-5">
                   <Field label="Name" name="name" required />
                   <Field label="Company" name="company" required />
@@ -84,29 +113,13 @@ function ContactPage() {
                   <Field label="Phone" name="phone" type="tel" />
                 </div>
                 <div className="grid gap-2">
-                  <label className="text-sm font-medium text-foreground" htmlFor="industry">Industry</label>
-                  <select
-                    id="industry"
-                    name="industry"
-                    className="h-11 rounded-md border border-input bg-background px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
-                  >
-                    <option>HVAC contractor</option>
-                    <option>Electrical contractor</option>
-                    <option>Landscaping contractor</option>
-                    <option>Manufacturing</option>
-                    <option>Engineering firm</option>
-                    <option>General contractor</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <div className="grid gap-2">
                   <label className="text-sm font-medium text-foreground" htmlFor="message">How can we help?</label>
                   <textarea
                     id="message"
                     name="message"
                     rows={5}
-                    className="rounded-md border border-input bg-background p-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
-                    placeholder="Tell us what's going on — downtime, cybersecurity, growth planning, insurance requirements, or something else."
+                    className="rounded-md border border-input bg-background p-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-brand"
+                    placeholder="Vendor inquiry, employment inquiry, partnership inquiry, and miscellaneous."
                   />
                 </div>
                 <div className="grid gap-2">
@@ -127,16 +140,18 @@ function ContactPage() {
                     </span>
                   </label>
                 </div>
+                <Turnstile />
                 <button
                   type="submit"
                   className="mt-2 inline-flex items-center justify-center rounded-md bg-brand px-6 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep"
                 >
-                  Schedule my free technology assessment
+                  Send message
                 </button>
                 <p className="text-xs text-muted-foreground">
                   Prefer to talk? Call <a className="text-brand font-medium" href="tel:2076922415">207-692-2415</a>.
                 </p>
               </form>
+
             )}
           </div>
 
