@@ -15,6 +15,21 @@ import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LocationsWatervilleRouteImport } from './routes/locations.waterville'
+import { Route as LocationsPortlandRouteImport } from './routes/locations.portland'
+import { Route as LocationsNewportRouteImport } from './routes/locations.newport'
+import { Route as LocationsLewistonRouteImport } from './routes/locations.lewiston'
+import { Route as LocationsBrunswickRouteImport } from './routes/locations.brunswick'
+import { Route as LocationsBiddefordRouteImport } from './routes/locations.biddeford'
+import { Route as LocationsBangorRouteImport } from './routes/locations.bangor'
+import { Route as LocationsAugustaRouteImport } from './routes/locations.augusta'
+import { Route as LocationsAuburnRouteImport } from './routes/locations.auburn'
+import { Route as IndustriesManufacturingRouteImport } from './routes/industries.manufacturing'
+import { Route as IndustriesLandscapingContractorsRouteImport } from './routes/industries.landscaping-contractors'
+import { Route as IndustriesHvacContractorsRouteImport } from './routes/industries.hvac-contractors'
+import { Route as IndustriesGeneralContractorsRouteImport } from './routes/industries.general-contractors'
+import { Route as IndustriesEngineeringFirmsRouteImport } from './routes/industries.engineering-firms'
+import { Route as IndustriesElectricalContractorsRouteImport } from './routes/industries.electrical-contractors'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
@@ -46,31 +61,156 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LocationsWatervilleRoute = LocationsWatervilleRouteImport.update({
+  id: '/waterville',
+  path: '/waterville',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsPortlandRoute = LocationsPortlandRouteImport.update({
+  id: '/portland',
+  path: '/portland',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsNewportRoute = LocationsNewportRouteImport.update({
+  id: '/newport',
+  path: '/newport',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsLewistonRoute = LocationsLewistonRouteImport.update({
+  id: '/lewiston',
+  path: '/lewiston',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsBrunswickRoute = LocationsBrunswickRouteImport.update({
+  id: '/brunswick',
+  path: '/brunswick',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsBiddefordRoute = LocationsBiddefordRouteImport.update({
+  id: '/biddeford',
+  path: '/biddeford',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsBangorRoute = LocationsBangorRouteImport.update({
+  id: '/bangor',
+  path: '/bangor',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsAugustaRoute = LocationsAugustaRouteImport.update({
+  id: '/augusta',
+  path: '/augusta',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsAuburnRoute = LocationsAuburnRouteImport.update({
+  id: '/auburn',
+  path: '/auburn',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const IndustriesManufacturingRoute = IndustriesManufacturingRouteImport.update({
+  id: '/manufacturing',
+  path: '/manufacturing',
+  getParentRoute: () => IndustriesRoute,
+} as any)
+const IndustriesLandscapingContractorsRoute =
+  IndustriesLandscapingContractorsRouteImport.update({
+    id: '/landscaping-contractors',
+    path: '/landscaping-contractors',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesHvacContractorsRoute =
+  IndustriesHvacContractorsRouteImport.update({
+    id: '/hvac-contractors',
+    path: '/hvac-contractors',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesGeneralContractorsRoute =
+  IndustriesGeneralContractorsRouteImport.update({
+    id: '/general-contractors',
+    path: '/general-contractors',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesEngineeringFirmsRoute =
+  IndustriesEngineeringFirmsRouteImport.update({
+    id: '/engineering-firms',
+    path: '/engineering-firms',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesElectricalContractorsRoute =
+  IndustriesElectricalContractorsRouteImport.update({
+    id: '/electrical-contractors',
+    path: '/electrical-contractors',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/industries': typeof IndustriesRoute
-  '/locations': typeof LocationsRoute
+  '/industries': typeof IndustriesRouteWithChildren
+  '/locations': typeof LocationsRouteWithChildren
   '/services': typeof ServicesRoute
+  '/industries/electrical-contractors': typeof IndustriesElectricalContractorsRoute
+  '/industries/engineering-firms': typeof IndustriesEngineeringFirmsRoute
+  '/industries/general-contractors': typeof IndustriesGeneralContractorsRoute
+  '/industries/hvac-contractors': typeof IndustriesHvacContractorsRoute
+  '/industries/landscaping-contractors': typeof IndustriesLandscapingContractorsRoute
+  '/industries/manufacturing': typeof IndustriesManufacturingRoute
+  '/locations/auburn': typeof LocationsAuburnRoute
+  '/locations/augusta': typeof LocationsAugustaRoute
+  '/locations/bangor': typeof LocationsBangorRoute
+  '/locations/biddeford': typeof LocationsBiddefordRoute
+  '/locations/brunswick': typeof LocationsBrunswickRoute
+  '/locations/lewiston': typeof LocationsLewistonRoute
+  '/locations/newport': typeof LocationsNewportRoute
+  '/locations/portland': typeof LocationsPortlandRoute
+  '/locations/waterville': typeof LocationsWatervilleRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/industries': typeof IndustriesRoute
-  '/locations': typeof LocationsRoute
+  '/industries': typeof IndustriesRouteWithChildren
+  '/locations': typeof LocationsRouteWithChildren
   '/services': typeof ServicesRoute
+  '/industries/electrical-contractors': typeof IndustriesElectricalContractorsRoute
+  '/industries/engineering-firms': typeof IndustriesEngineeringFirmsRoute
+  '/industries/general-contractors': typeof IndustriesGeneralContractorsRoute
+  '/industries/hvac-contractors': typeof IndustriesHvacContractorsRoute
+  '/industries/landscaping-contractors': typeof IndustriesLandscapingContractorsRoute
+  '/industries/manufacturing': typeof IndustriesManufacturingRoute
+  '/locations/auburn': typeof LocationsAuburnRoute
+  '/locations/augusta': typeof LocationsAugustaRoute
+  '/locations/bangor': typeof LocationsBangorRoute
+  '/locations/biddeford': typeof LocationsBiddefordRoute
+  '/locations/brunswick': typeof LocationsBrunswickRoute
+  '/locations/lewiston': typeof LocationsLewistonRoute
+  '/locations/newport': typeof LocationsNewportRoute
+  '/locations/portland': typeof LocationsPortlandRoute
+  '/locations/waterville': typeof LocationsWatervilleRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
-  '/industries': typeof IndustriesRoute
-  '/locations': typeof LocationsRoute
+  '/industries': typeof IndustriesRouteWithChildren
+  '/locations': typeof LocationsRouteWithChildren
   '/services': typeof ServicesRoute
+  '/industries/electrical-contractors': typeof IndustriesElectricalContractorsRoute
+  '/industries/engineering-firms': typeof IndustriesEngineeringFirmsRoute
+  '/industries/general-contractors': typeof IndustriesGeneralContractorsRoute
+  '/industries/hvac-contractors': typeof IndustriesHvacContractorsRoute
+  '/industries/landscaping-contractors': typeof IndustriesLandscapingContractorsRoute
+  '/industries/manufacturing': typeof IndustriesManufacturingRoute
+  '/locations/auburn': typeof LocationsAuburnRoute
+  '/locations/augusta': typeof LocationsAugustaRoute
+  '/locations/bangor': typeof LocationsBangorRoute
+  '/locations/biddeford': typeof LocationsBiddefordRoute
+  '/locations/brunswick': typeof LocationsBrunswickRoute
+  '/locations/lewiston': typeof LocationsLewistonRoute
+  '/locations/newport': typeof LocationsNewportRoute
+  '/locations/portland': typeof LocationsPortlandRoute
+  '/locations/waterville': typeof LocationsWatervilleRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -81,8 +221,44 @@ export interface FileRouteTypes {
     | '/industries'
     | '/locations'
     | '/services'
+    | '/industries/electrical-contractors'
+    | '/industries/engineering-firms'
+    | '/industries/general-contractors'
+    | '/industries/hvac-contractors'
+    | '/industries/landscaping-contractors'
+    | '/industries/manufacturing'
+    | '/locations/auburn'
+    | '/locations/augusta'
+    | '/locations/bangor'
+    | '/locations/biddeford'
+    | '/locations/brunswick'
+    | '/locations/lewiston'
+    | '/locations/newport'
+    | '/locations/portland'
+    | '/locations/waterville'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/industries' | '/locations' | '/services'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/industries'
+    | '/locations'
+    | '/services'
+    | '/industries/electrical-contractors'
+    | '/industries/engineering-firms'
+    | '/industries/general-contractors'
+    | '/industries/hvac-contractors'
+    | '/industries/landscaping-contractors'
+    | '/industries/manufacturing'
+    | '/locations/auburn'
+    | '/locations/augusta'
+    | '/locations/bangor'
+    | '/locations/biddeford'
+    | '/locations/brunswick'
+    | '/locations/lewiston'
+    | '/locations/newport'
+    | '/locations/portland'
+    | '/locations/waterville'
   id:
     | '__root__'
     | '/'
@@ -91,14 +267,29 @@ export interface FileRouteTypes {
     | '/industries'
     | '/locations'
     | '/services'
+    | '/industries/electrical-contractors'
+    | '/industries/engineering-firms'
+    | '/industries/general-contractors'
+    | '/industries/hvac-contractors'
+    | '/industries/landscaping-contractors'
+    | '/industries/manufacturing'
+    | '/locations/auburn'
+    | '/locations/augusta'
+    | '/locations/bangor'
+    | '/locations/biddeford'
+    | '/locations/brunswick'
+    | '/locations/lewiston'
+    | '/locations/newport'
+    | '/locations/portland'
+    | '/locations/waterville'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
-  IndustriesRoute: typeof IndustriesRoute
-  LocationsRoute: typeof LocationsRoute
+  IndustriesRoute: typeof IndustriesRouteWithChildren
+  LocationsRoute: typeof LocationsRouteWithChildren
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -146,15 +337,170 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/locations/waterville': {
+      id: '/locations/waterville'
+      path: '/waterville'
+      fullPath: '/locations/waterville'
+      preLoaderRoute: typeof LocationsWatervilleRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/portland': {
+      id: '/locations/portland'
+      path: '/portland'
+      fullPath: '/locations/portland'
+      preLoaderRoute: typeof LocationsPortlandRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/newport': {
+      id: '/locations/newport'
+      path: '/newport'
+      fullPath: '/locations/newport'
+      preLoaderRoute: typeof LocationsNewportRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/lewiston': {
+      id: '/locations/lewiston'
+      path: '/lewiston'
+      fullPath: '/locations/lewiston'
+      preLoaderRoute: typeof LocationsLewistonRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/brunswick': {
+      id: '/locations/brunswick'
+      path: '/brunswick'
+      fullPath: '/locations/brunswick'
+      preLoaderRoute: typeof LocationsBrunswickRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/biddeford': {
+      id: '/locations/biddeford'
+      path: '/biddeford'
+      fullPath: '/locations/biddeford'
+      preLoaderRoute: typeof LocationsBiddefordRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/bangor': {
+      id: '/locations/bangor'
+      path: '/bangor'
+      fullPath: '/locations/bangor'
+      preLoaderRoute: typeof LocationsBangorRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/augusta': {
+      id: '/locations/augusta'
+      path: '/augusta'
+      fullPath: '/locations/augusta'
+      preLoaderRoute: typeof LocationsAugustaRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/auburn': {
+      id: '/locations/auburn'
+      path: '/auburn'
+      fullPath: '/locations/auburn'
+      preLoaderRoute: typeof LocationsAuburnRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/industries/manufacturing': {
+      id: '/industries/manufacturing'
+      path: '/manufacturing'
+      fullPath: '/industries/manufacturing'
+      preLoaderRoute: typeof IndustriesManufacturingRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/landscaping-contractors': {
+      id: '/industries/landscaping-contractors'
+      path: '/landscaping-contractors'
+      fullPath: '/industries/landscaping-contractors'
+      preLoaderRoute: typeof IndustriesLandscapingContractorsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/hvac-contractors': {
+      id: '/industries/hvac-contractors'
+      path: '/hvac-contractors'
+      fullPath: '/industries/hvac-contractors'
+      preLoaderRoute: typeof IndustriesHvacContractorsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/general-contractors': {
+      id: '/industries/general-contractors'
+      path: '/general-contractors'
+      fullPath: '/industries/general-contractors'
+      preLoaderRoute: typeof IndustriesGeneralContractorsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/engineering-firms': {
+      id: '/industries/engineering-firms'
+      path: '/engineering-firms'
+      fullPath: '/industries/engineering-firms'
+      preLoaderRoute: typeof IndustriesEngineeringFirmsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/electrical-contractors': {
+      id: '/industries/electrical-contractors'
+      path: '/electrical-contractors'
+      fullPath: '/industries/electrical-contractors'
+      preLoaderRoute: typeof IndustriesElectricalContractorsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
   }
 }
+
+interface IndustriesRouteChildren {
+  IndustriesElectricalContractorsRoute: typeof IndustriesElectricalContractorsRoute
+  IndustriesEngineeringFirmsRoute: typeof IndustriesEngineeringFirmsRoute
+  IndustriesGeneralContractorsRoute: typeof IndustriesGeneralContractorsRoute
+  IndustriesHvacContractorsRoute: typeof IndustriesHvacContractorsRoute
+  IndustriesLandscapingContractorsRoute: typeof IndustriesLandscapingContractorsRoute
+  IndustriesManufacturingRoute: typeof IndustriesManufacturingRoute
+}
+
+const IndustriesRouteChildren: IndustriesRouteChildren = {
+  IndustriesElectricalContractorsRoute: IndustriesElectricalContractorsRoute,
+  IndustriesEngineeringFirmsRoute: IndustriesEngineeringFirmsRoute,
+  IndustriesGeneralContractorsRoute: IndustriesGeneralContractorsRoute,
+  IndustriesHvacContractorsRoute: IndustriesHvacContractorsRoute,
+  IndustriesLandscapingContractorsRoute: IndustriesLandscapingContractorsRoute,
+  IndustriesManufacturingRoute: IndustriesManufacturingRoute,
+}
+
+const IndustriesRouteWithChildren = IndustriesRoute._addFileChildren(
+  IndustriesRouteChildren,
+)
+
+interface LocationsRouteChildren {
+  LocationsAuburnRoute: typeof LocationsAuburnRoute
+  LocationsAugustaRoute: typeof LocationsAugustaRoute
+  LocationsBangorRoute: typeof LocationsBangorRoute
+  LocationsBiddefordRoute: typeof LocationsBiddefordRoute
+  LocationsBrunswickRoute: typeof LocationsBrunswickRoute
+  LocationsLewistonRoute: typeof LocationsLewistonRoute
+  LocationsNewportRoute: typeof LocationsNewportRoute
+  LocationsPortlandRoute: typeof LocationsPortlandRoute
+  LocationsWatervilleRoute: typeof LocationsWatervilleRoute
+}
+
+const LocationsRouteChildren: LocationsRouteChildren = {
+  LocationsAuburnRoute: LocationsAuburnRoute,
+  LocationsAugustaRoute: LocationsAugustaRoute,
+  LocationsBangorRoute: LocationsBangorRoute,
+  LocationsBiddefordRoute: LocationsBiddefordRoute,
+  LocationsBrunswickRoute: LocationsBrunswickRoute,
+  LocationsLewistonRoute: LocationsLewistonRoute,
+  LocationsNewportRoute: LocationsNewportRoute,
+  LocationsPortlandRoute: LocationsPortlandRoute,
+  LocationsWatervilleRoute: LocationsWatervilleRoute,
+}
+
+const LocationsRouteWithChildren = LocationsRoute._addFileChildren(
+  LocationsRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
-  IndustriesRoute: IndustriesRoute,
-  LocationsRoute: LocationsRoute,
+  IndustriesRoute: IndustriesRouteWithChildren,
+  LocationsRoute: LocationsRouteWithChildren,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
