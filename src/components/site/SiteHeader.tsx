@@ -48,11 +48,7 @@ export function SiteHeader() {
               Industries <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="flex flex-col min-w-[16rem]">
-              <DropdownMenuItem asChild>
-                <Link to="/industries" className="cursor-pointer font-semibold">
-                  All Industries
-                </Link>
-              </DropdownMenuItem>
+
               {INDUSTRIES.map((i) => (
                 <DropdownMenuItem key={i.slug} asChild>
                   <Link to={`/industries/${i.slug}`} className="cursor-pointer">
