@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
+import logo from "@/assets/snowpond-logo.png.asset.json";
 
 const industries = [
   ["hvac-contractors", "HVAC Contractors"],
@@ -27,9 +28,8 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-brand-deep text-brand-foreground">
       <div className="container-page py-14 grid gap-10 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2.5">
-            <span className="grid h-9 w-9 place-items-center rounded-md bg-white/10 font-display font-bold">SP</span>
-            <span className="font-display font-semibold">Snow Pond Technology Group</span>
+          <div className="inline-flex items-center rounded-lg bg-white px-3 py-2">
+            <img src={logo.url} alt="Snow Pond Technology Group" className="h-9 w-auto" />
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
             Locally owned in Oakland, Maine. Trusted technology partner to contractors and manufacturers across Central
