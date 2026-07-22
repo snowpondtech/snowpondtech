@@ -5,17 +5,19 @@ import { CTASection } from "./CTASection";
 import type { Industry } from "../../data/industries";
 import { INDUSTRIES } from "../../data/industries";
 
+const lower = (s: string) => s.toLowerCase().replace(/\bhvac\b/g, "HVAC");
+
 export function IndustryPage({ industry }: { industry: Industry }) {
   const others = INDUSTRIES.filter((i) => i.slug !== industry.slug);
   return (
     <>
-      <PageHero eyebrow={`Industries · ${industry.short}`} title={`IT that fits how ${industry.name.toLowerCase()} actually work`} description={industry.hero} />
+      <PageHero eyebrow={`Industries · ${industry.short}`} title={`IT that fits how ${lower(industry.name)} actually work`} description={industry.hero} />
 
       <section className="py-20 lg:py-24">
         <div className="container-page grid lg:grid-cols-2 gap-12">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Common challenges</p>
-            <h2 className="mt-3 text-3xl font-semibold text-foreground">What we hear from {industry.short.toLowerCase()} owners</h2>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground">What we hear from {lower(industry.short)} owners</h2>
             <ul className="mt-6 space-y-4">
               {industry.challenges.map((c) => (
                 <li key={c} className="flex items-start gap-3">
