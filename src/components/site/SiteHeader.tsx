@@ -48,11 +48,7 @@ export function SiteHeader() {
               Industries <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="flex flex-col min-w-[16rem]">
-              <DropdownMenuItem asChild>
-                <Link to="/industries" className="cursor-pointer font-semibold">
-                  All Industries
-                </Link>
-              </DropdownMenuItem>
+
               {INDUSTRIES.map((i) => (
                 <DropdownMenuItem key={i.slug} asChild>
                   <Link to={`/industries/${i.slug}`} className="cursor-pointer">
@@ -73,11 +69,7 @@ export function SiteHeader() {
               Locations <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="flex flex-col min-w-[14rem]">
-              <DropdownMenuItem asChild>
-                <Link to="/locations" className="cursor-pointer font-semibold">
-                  All Locations
-                </Link>
-              </DropdownMenuItem>
+
               {LOCATIONS.map((l) => (
                 <DropdownMenuItem key={l.slug} asChild>
                   <Link to={`/locations/${l.slug}`} className="cursor-pointer">
@@ -169,13 +161,6 @@ export function SiteHeader() {
               <div className="py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 Industries
               </div>
-              <Link
-                to="/industries"
-                onClick={() => setOpen(false)}
-                className="py-1.5 text-sm font-semibold text-foreground"
-              >
-                All Industries
-              </Link>
               {INDUSTRIES.map((i) => (
                 <Link
                   key={i.slug}
@@ -199,13 +184,6 @@ export function SiteHeader() {
               <div className="py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 Locations
               </div>
-              <Link
-                to="/locations"
-                onClick={() => setOpen(false)}
-                className="py-1.5 text-sm font-semibold text-foreground"
-              >
-                All Locations
-              </Link>
               {LOCATIONS.map((l) => (
                 <Link
                   key={l.slug}
