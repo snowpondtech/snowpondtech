@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/snowpond-logo.png.asset.json";
 
 const nav = [
   { to: "/services", label: "Services" },
@@ -15,14 +16,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between gap-6">
-        <Link to="/" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-md bg-brand text-brand-foreground font-display font-bold">
-            SP
-          </span>
-          <span className="flex flex-col leading-tight">
-            <span className="font-display font-semibold text-foreground">Snow Pond</span>
-            <span className="text-[11px] uppercase tracking-wider text-muted-foreground">Technology Group</span>
-          </span>
+        <Link to="/" className="flex items-center" aria-label="Snow Pond Technology Group">
+          <img src={logo.url} alt="Snow Pond Technology Group" className="h-9 md:h-10 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-foreground/80">
