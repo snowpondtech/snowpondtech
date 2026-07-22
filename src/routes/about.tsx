@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { CTASection } from "../components/site/CTASection";
 import { Handshake, HeartHandshake, MapPin, ShieldCheck, Sparkles, Users } from "lucide-react";
+import { LinkedInIcon } from "../components/site/SocialIcons";
 import ownerHeadshot from "@/assets/owner-headshot.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
