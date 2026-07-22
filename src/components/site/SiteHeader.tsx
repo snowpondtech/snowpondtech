@@ -184,13 +184,6 @@ export function SiteHeader() {
               <div className="py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 Locations
               </div>
-              <Link
-                to="/locations"
-                onClick={() => setOpen(false)}
-                className="py-1.5 text-sm font-semibold text-foreground"
-              >
-                All Locations
-              </Link>
               {LOCATIONS.map((l) => (
                 <Link
                   key={l.slug}
