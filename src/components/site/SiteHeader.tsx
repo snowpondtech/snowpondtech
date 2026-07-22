@@ -69,11 +69,7 @@ export function SiteHeader() {
               Locations <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start" className="flex flex-col min-w-[14rem]">
-              <DropdownMenuItem asChild>
-                <Link to="/locations" className="cursor-pointer font-semibold">
-                  All Locations
-                </Link>
-              </DropdownMenuItem>
+
               {LOCATIONS.map((l) => (
                 <DropdownMenuItem key={l.slug} asChild>
                   <Link to={`/locations/${l.slug}`} className="cursor-pointer">
