@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
-import { CheckCircle2, Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Building2, CheckCircle2, Clock, Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/contact")({
