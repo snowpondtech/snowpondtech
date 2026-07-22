@@ -138,7 +138,7 @@ function ContactPage() {
             <div className="rounded-2xl border border-border overflow-hidden">
               <div className="aspect-[4/3] bg-brand-soft">
                 <iframe
-                  title="Snow Pond service area map"
+                  title="Snow Pond Tech service area map"
                   className="w-full h-full"
                   loading="lazy"
                   src="https://www.google.com/maps?q=Oakland,+Maine&output=embed"

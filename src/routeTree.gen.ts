@@ -16,6 +16,7 @@ import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LocationsIndexRouteImport } from './routes/locations.index'
 import { Route as LocationsWatervilleRouteImport } from './routes/locations.waterville'
 import { Route as LocationsPortlandRouteImport } from './routes/locations.portland'
 import { Route as LocationsNewportRouteImport } from './routes/locations.newport'
@@ -66,6 +67,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsIndexRoute = LocationsIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LocationsRoute,
 } as any)
 const LocationsWatervilleRoute = LocationsWatervilleRouteImport.update({
   id: '/waterville',
@@ -171,13 +177,13 @@ export interface FileRoutesByFullPath {
   '/locations/newport': typeof LocationsNewportRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
+  '/locations/': typeof LocationsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/industries': typeof IndustriesRouteWithChildren
-  '/locations': typeof LocationsRouteWithChildren
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/industries/electrical-contractors': typeof IndustriesElectricalContractorsRoute
@@ -195,6 +201,7 @@ export interface FileRoutesByTo {
   '/locations/newport': typeof LocationsNewportRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
+  '/locations': typeof LocationsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -220,6 +227,7 @@ export interface FileRoutesById {
   '/locations/newport': typeof LocationsNewportRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
+  '/locations/': typeof LocationsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -246,13 +254,13 @@ export interface FileRouteTypes {
     | '/locations/newport'
     | '/locations/portland'
     | '/locations/waterville'
+    | '/locations/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/contact'
     | '/industries'
-    | '/locations'
     | '/services'
     | '/sitemap.xml'
     | '/industries/electrical-contractors'
@@ -270,6 +278,7 @@ export interface FileRouteTypes {
     | '/locations/newport'
     | '/locations/portland'
     | '/locations/waterville'
+    | '/locations'
   id:
     | '__root__'
     | '/'
@@ -294,6 +303,7 @@ export interface FileRouteTypes {
     | '/locations/newport'
     | '/locations/portland'
     | '/locations/waterville'
+    | '/locations/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -356,6 +366,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/locations/': {
+      id: '/locations/'
+      path: '/'
+      fullPath: '/locations/'
+      preLoaderRoute: typeof LocationsIndexRouteImport
+      parentRoute: typeof LocationsRoute
     }
     '/locations/waterville': {
       id: '/locations/waterville'
@@ -497,6 +514,7 @@ interface LocationsRouteChildren {
   LocationsNewportRoute: typeof LocationsNewportRoute
   LocationsPortlandRoute: typeof LocationsPortlandRoute
   LocationsWatervilleRoute: typeof LocationsWatervilleRoute
+  LocationsIndexRoute: typeof LocationsIndexRoute
 }
 
 const LocationsRouteChildren: LocationsRouteChildren = {
@@ -509,6 +527,7 @@ const LocationsRouteChildren: LocationsRouteChildren = {
   LocationsNewportRoute: LocationsNewportRoute,
   LocationsPortlandRoute: LocationsPortlandRoute,
   LocationsWatervilleRoute: LocationsWatervilleRoute,
+  LocationsIndexRoute: LocationsIndexRoute,
 }
 
 const LocationsRouteWithChildren = LocationsRoute._addFileChildren(

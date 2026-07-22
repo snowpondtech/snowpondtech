@@ -38,7 +38,7 @@ function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Snow Pond"
+        eyebrow="About Snow Pond Tech"
         title="A Maine technology partner that thinks like an owner"
         description="Snow Pond Technology Group is a locally owned company based in Oakland, Maine. We help contractors and manufacturers across Central and Southern Maine turn technology from a source of frustration into a competitive advantage."
       />
@@ -69,7 +69,7 @@ function AboutPage() {
           <div className="rounded-3xl border border-border bg-brand-soft/60 p-8 lg:p-10">
             <p className="font-display text-2xl font-semibold text-foreground">Meet the owner</p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Snow Pond is led by a Maine-based owner with a background in business technology and a deep respect for
+              Snow Pond Tech is led by a Maine-based owner with a background in business technology and a deep respect for
               the trades and manufacturers who make this state work. Every client engagement includes direct access to
               ownership — not a layer of account managers between you and the people making decisions.
             </p>

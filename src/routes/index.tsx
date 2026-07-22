@@ -265,7 +265,7 @@ function HomePage() {
                 to="/about"
                 className="inline-flex items-center justify-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep"
               >
-                About Snow Pond
+                About Snow Pond Tech
               </Link>
               <Link
                 to="/services"
