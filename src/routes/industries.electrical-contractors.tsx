@@ -8,9 +8,9 @@ export const Route = createFileRoute("/industries/electrical-contractors")({
   head: () => ({
     meta: [
       { title: "IT Services for Electrical Contractors in Maine " },
-      { name: "description", content: " Snow Pond|IT support, cybersecurity, and business technology for Maine electrical contractors — from estimators to job sites to the front office." },
+      { name: "description", content: " Snow Pond Tech|IT support, cybersecurity, and business technology for Maine electrical contractors — from estimators to job sites to the front office." },
       { property: "og:title", content: "IT Services for Electrical Contractors in Maine " },
-      { property: "og:description", content: " Snow Pond|IT support, cybersecurity, and business technology for Maine electrical contractors — from estimators to job sites to the front office." },
+      { property: "og:description", content: " Snow Pond Tech|IT support, cybersecurity, and business technology for Maine electrical contractors — from estimators to job sites to the front office." },
       { property: "og:url", content: "/industries/electrical-contractors" },
     ],
     links: [{ rel: "canonical", href: "/industries/electrical-contractors" }],

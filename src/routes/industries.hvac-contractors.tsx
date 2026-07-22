@@ -8,9 +8,9 @@ export const Route = createFileRoute("/industries/hvac-contractors")({
   head: () => ({
     meta: [
       { title: "IT Services for HVAC Contractors in Maine " },
-      { name: "description", content: " Snow Pond|Managed IT, cybersecurity, and mobile workforce support built for Maine HVAC contractors. Keep dispatch, technicians, and the office moving as one." },
+      { name: "description", content: " Snow Pond Tech|Managed IT, cybersecurity, and mobile workforce support built for Maine HVAC contractors. Keep dispatch, technicians, and the office moving as one." },
       { property: "og:title", content: "IT Services for HVAC Contractors in Maine " },
-      { property: "og:description", content: " Snow Pond|Managed IT, cybersecurity, and mobile workforce support built for Maine HVAC contractors. Keep dispatch, technicians, and the office moving as one." },
+      { property: "og:description", content: " Snow Pond Tech|Managed IT, cybersecurity, and mobile workforce support built for Maine HVAC contractors. Keep dispatch, technicians, and the office moving as one." },
       { property: "og:url", content: "/industries/hvac-contractors" },
     ],
     links: [{ rel: "canonical", href: "/industries/hvac-contractors" }],

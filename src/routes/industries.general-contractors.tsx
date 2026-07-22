@@ -8,9 +8,9 @@ export const Route = createFileRoute("/industries/general-contractors")({
   head: () => ({
     meta: [
       { title: "IT Services for General Contractors in Maine " },
-      { name: "description", content: " Snow Pond|Job-site connectivity, project data protection, and business IT support for general contractors across Central and Southern Maine." },
+      { name: "description", content: " Snow Pond Tech|Job-site connectivity, project data protection, and business IT support for general contractors across Central and Southern Maine." },
       { property: "og:title", content: "IT Services for General Contractors in Maine " },
-      { property: "og:description", content: " Snow Pond|Job-site connectivity, project data protection, and business IT support for general contractors across Central and Southern Maine." },
+      { property: "og:description", content: " Snow Pond Tech|Job-site connectivity, project data protection, and business IT support for general contractors across Central and Southern Maine." },
       { property: "og:url", content: "/industries/general-contractors" },
     ],
     links: [{ rel: "canonical", href: "/industries/general-contractors" }],

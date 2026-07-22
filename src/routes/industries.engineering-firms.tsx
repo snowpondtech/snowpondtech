@@ -8,9 +8,9 @@ export const Route = createFileRoute("/industries/engineering-firms")({
   head: () => ({
     meta: [
       { title: "IT Services for Engineering Firms in Maine " },
-      { name: "description", content: " Snow Pond|Workstations, secure remote access, and IP protection for Maine engineering firms running CAD, BIM, and modeling workloads." },
+      { name: "description", content: " Snow Pond Tech|Workstations, secure remote access, and IP protection for Maine engineering firms running CAD, BIM, and modeling workloads." },
       { property: "og:title", content: "IT Services for Engineering Firms in Maine " },
-      { property: "og:description", content: " Snow Pond|Workstations, secure remote access, and IP protection for Maine engineering firms running CAD, BIM, and modeling workloads." },
+      { property: "og:description", content: " Snow Pond Tech|Workstations, secure remote access, and IP protection for Maine engineering firms running CAD, BIM, and modeling workloads." },
       { property: "og:url", content: "/industries/engineering-firms" },
     ],
     links: [{ rel: "canonical", href: "/industries/engineering-firms" }],
