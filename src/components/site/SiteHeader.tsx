@@ -113,7 +113,7 @@ export function SiteHeader() {
                 {n.label}
               </Link>
             ))}
-            <div className="pt-2 border-t border-border">
+            <div className="pt-2 border-t border-border flex flex-col">
               <div className="py-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 Client Resources
               </div>
@@ -123,7 +123,7 @@ export function SiteHeader() {
                   href={item.href}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="py-2 inline-flex items-center gap-2 text-base font-medium text-foreground"
+                  className="py-2 flex items-center gap-2 text-base font-medium text-foreground"
                 >
                   {item.label}
                   <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
