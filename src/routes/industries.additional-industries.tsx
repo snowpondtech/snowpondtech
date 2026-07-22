@@ -4,7 +4,6 @@ import {
   Briefcase,
   Building2,
   CheckCircle2,
-  HeartHandshake,
   MapPin,
   ShieldCheck,
   Users,
