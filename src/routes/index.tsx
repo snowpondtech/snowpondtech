@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { CTASection } from "../components/site/CTASection";
 import { INDUSTRIES } from "../data/industries";
+import heroAsset from "../assets/Hero-Image.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -79,44 +80,59 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="hero-grid-bg text-white">
-        <div className="container-page py-20 lg:py-32">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
-            Oakland, Maine · Serving Central &amp; Southern Maine
-          </p>
-          <h1 className="mt-4 max-w-4xl text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05]">
-            Helping Maine Contractors and Manufacturers Stay Productive, Secure, and Profitable
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/85">
-            Technology should help your business grow, not slow it down. Snow Pond Technology Group helps contractors
-            and manufacturers across Central and Southern Maine reduce downtime, strengthen cybersecurity, and support
-            their teams — in the office and in the field.
-          </p>
-          <div className="mt-9 flex flex-col sm:flex-row gap-3">
-            <Link
-              to="/schedule-assessment"
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-brand-deep hover:bg-white/90"
-            >
-              Schedule a Free Technology Assessment <ArrowRight className="h-4 w-4" />
-            </Link>
-            <a
-              href="tel:2076922415"
-              className="inline-flex items-center justify-center rounded-md border border-white/30 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10"
-            >
-              Talk With an IT Expert · 207-692-2415
-            </a>
-          </div>
-          <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl">
-            {[
-              ["Locally owned", "Based in Oakland, ME"],
-              ["Contractor-first", "Built for the trades"],
-              ["Real humans", "Responsive Maine team"],
-              ["Fixed pricing", "No surprise invoices"],
-            ].map(([t, s]) => (
-              <div key={t}>
-                <p className="font-display font-semibold text-white">{t}</p>
-                <p className="text-sm text-white/70">{s}</p>
+        <div className="container-page py-20 lg:py-28">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
+                Oakland, Maine · Serving Central &amp; Southern Maine
+              </p>
+              <h1 className="mt-4 max-w-4xl text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05]">
+                Helping Maine Contractors and Manufacturers Stay Productive, Secure, and Profitable
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg text-white/85">
+                Technology should help your business grow, not slow it down. Snow Pond Technology Group helps contractors
+                and manufacturers across Central and Southern Maine reduce downtime, strengthen cybersecurity, and support
+                their teams — in the office and in the field.
+              </p>
+              <div className="mt-9 flex flex-col sm:flex-row gap-3">
+                <Link
+                  to="/schedule-assessment"
+                  className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-brand-deep hover:bg-white/90"
+                >
+                  Schedule a Free Technology Assessment <ArrowRight className="h-4 w-4" />
+                </Link>
+                <a
+                  href="tel:2076922415"
+                  className="inline-flex items-center justify-center rounded-md border border-white/30 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10"
+                >
+                  Talk With an IT Expert · 207-692-2415
+                </a>
               </div>
-            ))}
+              <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl">
+                {[
+                  ["Locally owned", "Based in Oakland, ME"],
+                  ["Contractor-first", "Built for the trades"],
+                  ["Real humans", "Responsive Maine team"],
+                  ["Fixed pricing", "No surprise invoices"],
+                ].map(([t, s]) => (
+                  <div key={t}>
+                    <p className="font-display font-semibold text-white">{t}</p>
+                    <p className="text-sm text-white/70">{s}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src={heroAsset.url}
+                alt="Contractor in a hard hat and safety vest using a tablet at a Maine job site"
+                width={1200}
+                height={800}
+                className="rounded-2xl shadow-2xl shadow-black/25 object-cover w-full aspect-[3/2]"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
           </div>
         </div>
       </section>
