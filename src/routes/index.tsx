@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { CTASection } from "../components/site/CTASection";
 import { INDUSTRIES } from "../data/industries";
+import heroAsset from "../assets/Hero-Image.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
