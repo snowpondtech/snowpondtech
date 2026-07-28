@@ -31,7 +31,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between gap-6">
         <Link to="/" className="flex items-center" aria-label="Snow Pond Technology Group">
-          <img src={logo.url} alt="Snow Pond Technology Group" className="h-12 md:h-14 w-auto" />
+          <img src={logo.url} alt="Snow Pond Technology Group" className="h-14 md:h-16 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7 text-sm font-medium text-foreground/80">
