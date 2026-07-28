@@ -86,7 +86,7 @@ function HomePage() {
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
                 Oakland, Maine · Serving Central &amp; Southern Maine
               </p>
-                <h1 className="mt-4 max-w-4xl text-3xl sm:text-4xl lg:text-5xl font-semibold leading-[1.05]">
+                <h1 className="mt-4 max-w-4xl text-2xl sm:text-3xl lg:text-4xl font-semibold leading-[1.05]">
                   Helping Maine Contractors and Manufacturers Stay Productive, Secure, and Profitable
                 </h1>
               <p className="mt-6 max-w-2xl text-lg text-white/85">
@@ -142,7 +142,7 @@ function HomePage() {
         <div className="container-page">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">The cost of bad technology</p>
-            <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
+            <h2 className="mt-3 text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground">
               Technology Problems Cost You Time and Money
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -190,7 +190,7 @@ function HomePage() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="max-w-2xl">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Who we serve</p>
-              <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
+              <h2 className="mt-3 text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground">
                 Built for Maine Contractors and Manufacturers
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
@@ -228,7 +228,7 @@ function HomePage() {
         <div className="container-page">
           <div className="max-w-3xl">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Business outcomes, not tech specs</p>
-            <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
+            <h2 className="mt-3 text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground">
               What Better Technology Means for Your Business
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
@@ -255,7 +255,7 @@ function HomePage() {
         <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">A local partner, not a call center</p>
-            <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-semibold text-foreground">
+            <h2 className="mt-3 text-xl sm:text-2xl lg:text-3xl font-semibold text-foreground">
               A Maine-based team that answers the phone
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
