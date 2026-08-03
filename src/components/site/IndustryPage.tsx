@@ -21,23 +21,26 @@ export function IndustryPage({
   imageSubheading?: string;
 }) {
   const others = INDUSTRIES.filter((i) => i.slug !== industry.slug);
+  const media = image ? (
+    <div className="w-full">
+      {(imageHeading || imageSubheading) && (
+        <div className="mb-4 max-w-xl">
+          {imageHeading && <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">{imageHeading}</p>}
+          {imageSubheading && <h2 className="mt-2 text-xl sm:text-2xl font-semibold text-white">{imageSubheading}</h2>}
+        </div>
+      )}
+      <img src={image} alt={imageAlt || `Photo representing ${industry.name}`} className="w-full rounded-2xl shadow-xl aspect-[16/9] object-cover" />
+    </div>
+  ) : null;
+
   return (
     <>
-      <PageHero eyebrow={`Industries · ${industry.short}`} title={`IT that fits how ${lower(industry.name)} actually work`} description={industry.hero} />
-
-      {image && (
-        <section className="py-12 lg:py-16 bg-muted/50 border-y border-border">
-          <div className="container-page">
-            {(imageHeading || imageSubheading) && (
-              <div className="mb-6 max-w-2xl">
-                {imageHeading && <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">{imageHeading}</p>}
-                {imageSubheading && <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-foreground">{imageSubheading}</h2>}
-              </div>
-            )}
-            <img src={image} alt={imageAlt || `Photo representing ${industry.name}`} className="w-1/2 mx-auto rounded-2xl shadow-xl aspect-[16/9] object-cover" />
-          </div>
-        </section>
-      )}
+      <PageHero
+        eyebrow={`Industries · ${industry.short}`}
+        title={`IT that fits how ${lower(industry.name)} actually work`}
+        description={industry.hero}
+        media={media}
+      />
 
       <section className="py-20 lg:py-24">
         <div className="container-page grid lg:grid-cols-2 gap-12">
