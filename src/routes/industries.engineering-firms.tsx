@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { IndustryPage } from "../components/site/IndustryPage";
 import { getIndustry } from "../data/industries";
+import engineeringImage from "../assets/EngineeringFirms.png.asset.json";
 
 const industry = getIndustry("engineering-firms")!;
 
@@ -15,5 +16,13 @@ export const Route = createFileRoute("/industries/engineering-firms")({
     ],
     links: [{ rel: "canonical", href: "/industries/engineering-firms" }],
   }),
-  component: () => <IndustryPage industry={industry} />,
+  component: () => (
+    <IndustryPage
+      industry={industry}
+      image={engineeringImage.url}
+      imageAlt="Engineering team reviewing architectural blueprints and CAD designs in a modern office"
+      imageHeading="Designed for engineering teams"
+      imageSubheading="Technology that keeps your projects moving"
+    />
+  ),
 });
