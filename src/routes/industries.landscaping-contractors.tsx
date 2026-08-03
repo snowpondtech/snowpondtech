@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { IndustryPage } from "../components/site/IndustryPage";
 import { getIndustry } from "../data/industries";
+import landscapingImage from "../assets/LandscapingContractors.png.asset.json";
 
 const industry = getIndustry("landscaping-contractors")!;
 
@@ -15,5 +16,13 @@ export const Route = createFileRoute("/industries/landscaping-contractors")({
     ],
     links: [{ rel: "canonical", href: "/industries/landscaping-contractors" }],
   }),
-  component: () => <IndustryPage industry={industry} />,
+  component: () => (
+    <IndustryPage
+      industry={industry}
+      image={landscapingImage.url}
+      imageAlt="Landscaping contractor using a tablet on a residential job site while crew installs plants and hardscaping"
+      imageHeading="Built for landscaping contractors"
+      imageSubheading="IT support that grows with your season and your crew"
+    />
+  ),
 });
