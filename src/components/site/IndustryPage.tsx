@@ -34,7 +34,7 @@ export function IndustryPage({
                 {imageSubheading && <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-foreground">{imageSubheading}</h2>}
               </div>
             )}
-            <img src={image} alt={imageAlt || `Photo representing ${industry.name}`} className="w-full rounded-2xl shadow-xl aspect-[16/9] object-cover" />
+            <img src={image} alt={imageAlt || `Photo representing ${industry.name}`} className="w-1/2 mx-auto rounded-2xl shadow-xl aspect-[16/9] object-cover" />
           </div>
         </section>
       )}
