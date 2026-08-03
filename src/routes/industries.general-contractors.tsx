@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { IndustryPage } from "../components/site/IndustryPage";
 import { getIndustry } from "../data/industries";
+import generalContractorsImage from "../assets/GeneralContractors.png.asset.json";
 
 const industry = getIndustry("general-contractors")!;
 
@@ -15,5 +16,13 @@ export const Route = createFileRoute("/industries/general-contractors")({
     ],
     links: [{ rel: "canonical", href: "/industries/general-contractors" }],
   }),
-  component: () => <IndustryPage industry={industry} />,
+  component: () => (
+    <IndustryPage
+      industry={industry}
+      image={generalContractorsImage.url}
+      imageAlt="General contractor using a tablet on a job site to review plans and manage project data"
+      imageHeading="Built for general contractors"
+      imageSubheading="IT support that moves with your job sites"
+    />
+  ),
 });
