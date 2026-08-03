@@ -4,6 +4,7 @@ import { PageHero } from "../components/site/PageHero";
 import { Turnstile } from "../components/site/Turnstile";
 import { CheckCircle2, Mail, Phone } from "lucide-react";
 import { useState } from "react";
+import assessmentImage from "../assets/TechnologyAssessment.png.asset.json";
 
 export const Route = createFileRoute("/schedule-assessment")({
   head: () => ({
@@ -37,6 +38,13 @@ function SchedulePage() {
         eyebrow="Free Assessment"
         title="Schedule a Free Technology Assessment"
         description="A 30-minute conversation with a Maine-based advisor — no sales pressure, no jargon. Walk away with a clear picture of where your technology is helping (and where it's holding you back)."
+        media={
+          <img
+            src={assessmentImage.url}
+            alt="Technology assessment checklist with IT security, network, and cloud review items on a desk with laptop and network equipment"
+            className="w-3/4 mx-auto rounded-2xl shadow-xl aspect-[16/9] object-cover"
+          />
+        }
       >
         <div className="mt-8 flex flex-col sm:flex-row gap-3">
           <a
