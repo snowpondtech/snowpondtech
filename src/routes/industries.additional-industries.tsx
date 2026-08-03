@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { PageHero } from "../components/site/PageHero";
 import { CTASection } from "../components/site/CTASection";
+import additionalImage from "../assets/AdditionalIndustries.png.asset.json";
 
 export const Route = createFileRoute("/industries/additional-industries")({
   head: () => ({
@@ -143,6 +144,17 @@ function AdditionalIndustriesPage() {
         eyebrow="Additional Industries"
         title="Technology solutions for growing Maine businesses"
         description="While Snow Pond Technology Group specializes in supporting contractors, manufacturers, and engineering firms, we also work with a variety of other growing organizations throughout Central and Southern Maine."
+        media={
+          <div className="w-full">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">Built for growing businesses</p>
+            <h2 className="mt-2 text-xl sm:text-2xl font-semibold text-white">Technology that supports your team</h2>
+            <img
+              src={additionalImage.url}
+              alt="Business team collaborating around a conference table with laptops and analytics displays"
+              className="mt-4 w-3/4 mx-auto rounded-2xl shadow-xl aspect-[16/9] object-cover"
+            />
+          </div>
+        }
       />
 
       <section className="container-page py-16 lg:py-20">
