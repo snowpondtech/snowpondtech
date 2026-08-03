@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { PageHero } from "../components/site/PageHero";
 import { CTASection } from "../components/site/CTASection";
+import additionalImage from "../assets/AdditionalIndustries.png.asset.json";
 
 export const Route = createFileRoute("/industries/additional-industries")({
   head: () => ({
