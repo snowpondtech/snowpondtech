@@ -7,11 +7,37 @@ import { INDUSTRIES } from "../../data/industries";
 
 const lower = (s: string) => s.toLowerCase().replace(/\bhvac\b/g, "HVAC");
 
-export function IndustryPage({ industry }: { industry: Industry }) {
+export function IndustryPage({
+  industry,
+  image,
+  imageAlt,
+  imageHeading,
+  imageSubheading,
+}: {
+  industry: Industry;
+  image?: string;
+  imageAlt?: string;
+  imageHeading?: string;
+  imageSubheading?: string;
+}) {
   const others = INDUSTRIES.filter((i) => i.slug !== industry.slug);
   return (
     <>
       <PageHero eyebrow={`Industries · ${industry.short}`} title={`IT that fits how ${lower(industry.name)} actually work`} description={industry.hero} />
+
+      {image && (
+        <section className="py-12 lg:py-16 bg-muted/50 border-y border-border">
+          <div className="container-page">
+            {(imageHeading || imageSubheading) && (
+              <div className="mb-6 max-w-2xl">
+                {imageHeading && <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">{imageHeading}</p>}
+                {imageSubheading && <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-foreground">{imageSubheading}</h2>}
+              </div>
+            )}
+            <img src={image} alt={imageAlt || `Photo representing ${industry.name}`} className="w-full rounded-2xl shadow-xl aspect-[16/9] object-cover" />
+          </div>
+        </section>
+      )}
 
       <section className="py-20 lg:py-24">
         <div className="container-page grid lg:grid-cols-2 gap-12">
