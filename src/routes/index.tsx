@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Locally owned, Maine-based technology partner for contractors and manufacturers. Reduce downtime, strengthen security, keep office and field teams connected.",
+          "Snow Pond Technology Group helps HVAC, electrical, landscaping, and manufacturing businesses across Central and Southern Maine reduce downtime, strengthen cybersecurity, and support growing teams.",
       },
       { property: "og:url", content: "/" },
     ],
