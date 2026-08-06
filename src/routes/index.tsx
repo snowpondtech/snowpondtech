@@ -232,7 +232,7 @@ function HomePage() {
               ["30-min", "Free technology assessment"],
               ["9 cities", "Served across Central & Southern Maine"],
               ["100%", "Locally owned in Oakland, ME"],
-              ["1 partner", "For strategy, security, and support"],
+              ["22 Years", "Serving Maine businesses since 2004"],
             ].map(([big, small]) => (
               <div key={big} className="rounded-2xl border border-border bg-card p-6">
                 <p className="font-display text-3xl font-bold text-brand">{big}</p>
