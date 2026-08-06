@@ -34,7 +34,7 @@ export function PageHero({
                   to="/schedule-assessment"
                   className="inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-semibold text-brand-deep hover:bg-white/90"
                 >
-                  Schedule a Free Technology Assessment
+                  Free Assessment
                 </Link>
                 <a
                   href="tel:2076922415"

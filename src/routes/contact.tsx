@@ -36,18 +36,18 @@ function ContactPage() {
     <>
       <PageHero
         title="Contact Us"
-        description="Have a question? Need to reach our team? Use the form below for general inquiries and we'll get back to you as soon as possible. Looking for IT guidance, cybersecurity advice, or a technology review? Schedule a Free Technology Assessment instead."
+        description="Have a question? Need to reach our team? Use the form below for general inquiries and we'll get back to you as soon as possible. Looking for IT guidance, cybersecurity advice, or a technology review? Request a Free Assessment instead."
       >
         <div className="mt-8 flex flex-col sm:flex-row gap-3">
           <Link
             to="/schedule-assessment"
             className="inline-flex items-center justify-center rounded-md bg-white px-5 py-3 text-sm font-semibold text-brand-deep hover:bg-white/90"
           >
-            Schedule a Free Technology Assessment
+            Free Assessment
           </Link>
           <a
             href="tel:2076922415"
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border border-white/30 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
           >
             <Phone className="h-4 w-4" /> 207-692-2415
           </a>

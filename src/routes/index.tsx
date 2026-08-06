@@ -81,7 +81,7 @@ function HomePage() {
                   to="/schedule-assessment"
                   className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-brand-deep hover:bg-white/90"
                 >
-                  Schedule a Free Technology Assessment <ArrowRight className="h-4 w-4" />
+                  Free Assessment <ArrowRight className="h-4 w-4" />
                 </Link>
                 <a
                   href="tel:2076922415"

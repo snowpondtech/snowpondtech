@@ -183,7 +183,7 @@ function AdditionalIndustriesPage() {
               to="/schedule-assessment"
               className="mt-6 inline-flex items-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
             >
-              Schedule a Free Technology Assessment
+              Free Assessment
             </Link>
           </div>
         </div>
@@ -261,7 +261,7 @@ function AdditionalIndustriesPage() {
               to="/schedule-assessment"
               className="mt-6 inline-flex items-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
             >
-              Schedule a Free Technology Assessment
+              Free Assessment
             </Link>
             <div className="mt-6 border-t border-border pt-4 text-sm text-muted-foreground space-y-1">
               <p className="font-semibold text-foreground">Snow Pond Technology Group</p>

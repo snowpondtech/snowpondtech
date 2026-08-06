@@ -243,7 +243,7 @@ export function SiteHeader() {
               onClick={() => setOpen(false)}
               className="mt-2 inline-flex justify-center rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-brand-foreground"
             >
-              Schedule a Free Technology Assessment
+              Free Assessment
             </Link>
           </div>
         </div>
