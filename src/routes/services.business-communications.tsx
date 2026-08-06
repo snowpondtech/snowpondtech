@@ -171,8 +171,7 @@ function BusinessCommunicationsPage() {
               to="/schedule-assessment"
               className="inline-flex items-center justify-center gap-2 rounded-md bg-brand px-6 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
             >
-              <CalendarCheck className="h-4 w-4" /> Schedule a Free Technology
-              Assessment
+                <CalendarCheck className="h-4 w-4" /> Free Assessment
             </Link>
           </div>
         </div>
@@ -408,8 +407,7 @@ function BusinessCommunicationsPage() {
                 to="/schedule-assessment"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-brand px-5 py-2.5 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
               >
-                <CalendarCheck className="h-4 w-4" /> Schedule a Free Technology
-                Assessment
+                <CalendarCheck className="h-4 w-4" /> Free Assessment
               </Link>
             </div>
           </div>
