@@ -23,7 +23,7 @@ export function CTASection({
 
           <a
             href="tel:2076922415"
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
           >
             <PhoneCall className="h-4 w-4" /> Book a Discovery Call · 207-692-2415
           </a>
