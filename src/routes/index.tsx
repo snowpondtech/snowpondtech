@@ -13,13 +13,6 @@ import {
   Factory,
   Ruler,
   Building2,
-  AlertTriangle,
-  Wifi,
-  Lock,
-  Compass,
-  CloudOff,
-  Database,
-  FileWarning,
 } from "lucide-react";
 import { CTASection } from "../components/site/CTASection";
 import { INDUSTRIES } from "../data/industries";
