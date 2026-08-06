@@ -124,7 +124,7 @@ export function SiteHeader() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href="tel:2076922415"
-            className="inline-flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-brand"
+            className="inline-flex items-center gap-2 whitespace-nowrap text-sm font-medium text-foreground/80 hover:text-brand"
           >
             <Phone className="h-4 w-4" />
             207-692-2415
@@ -235,7 +235,7 @@ export function SiteHeader() {
             >
               Blog
             </a>
-            <a href="tel:2076922415" className="py-2 inline-flex items-center gap-2 text-brand font-semibold">
+            <a href="tel:2076922415" className="py-2 inline-flex items-center gap-2 whitespace-nowrap text-brand font-semibold">
               <Phone className="h-4 w-4" /> 207-692-2415
             </a>
             <Link
