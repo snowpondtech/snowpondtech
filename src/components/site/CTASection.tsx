@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { CalendarCheck, PhoneCall } from "lucide-react";
 
 export function CTASection({
-  title = "Schedule Your Free Technology Assessment",
+  title = "Schedule Your Free Assessment",
   subtitle = "A 30-minute conversation with a Maine-based advisor — no sales pressure, no jargon. Walk away with a clear picture of where your technology is helping (and where it's holding you back).",
 }: {
   title?: string;

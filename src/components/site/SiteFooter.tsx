@@ -133,7 +133,7 @@ export function SiteFooter() {
             to="/schedule-assessment"
             className="mt-6 inline-flex items-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-brand-deep hover:bg-white/90"
           >
-            Free Technology Assessment
+            Free Assessment
           </Link>
         </div>
       </div>
