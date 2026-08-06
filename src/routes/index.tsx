@@ -107,7 +107,7 @@ function HomePage() {
             <div className="relative">
               <img
                 src={heroAsset.url}
-                alt="Contractor in a hard hat and safety vest using a tablet at a Maine job site"
+                alt="Contractor using a tablet with project management software at a Maine construction site"
                 width={1200}
                 height={800}
                 className="rounded-2xl shadow-2xl shadow-black/25 object-cover w-full aspect-[3/2]"
