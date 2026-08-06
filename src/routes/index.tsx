@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { CTASection } from "../components/site/CTASection";
 import { INDUSTRIES } from "../data/industries";
-import heroAsset from "../assets/Hero-Image.png.asset.json";
+import heroAsset from "../assets/Hero-Image-2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
