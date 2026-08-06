@@ -49,15 +49,6 @@ const industryIcons = {
   "general-contractors": HardHat,
 } as const;
 
-const problems = [
-  { icon: Clock, title: "Employees losing hours to tech issues", body: "Slow computers, printers that won't cooperate, and logins that don't work drain more time than most owners realize." },
-  { icon: Wifi, title: "Office and field teams out of sync", body: "When the truck can't talk to the office, jobs slip, callbacks pile up, and margins disappear." },
-  { icon: Lock, title: "Cybersecurity risks aimed at small business", body: "Contractors and manufacturers are prime targets — and one ransomware event can stop the whole company." },
-  { icon: Compass, title: "No clear technology plan", body: "You're spending money on IT, but nobody's connecting it to where the business is going next year." },
-  { icon: CloudOff, title: "Downtime that costs real money", body: "When systems go down, technicians go idle, invoices don't ship, and customers get impatient." },
-  { icon: Database, title: "Worried about losing critical data", body: "Job files, drawings, payroll, customer history — losing any of it would set the business back badly." },
-  { icon: FileWarning, title: "Cyber insurance getting harder", body: "Renewals now demand MFA, backup, endpoint protection, and training. If you can't check the boxes, coverage drops." },
-];
 
 const outcomes = [
   { icon: Clock, title: "Less downtime", body: "Systems that stay up so your people can stay billable." },
