@@ -28,7 +28,8 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-brand-deep text-brand-foreground">
       <div className="container-page py-14 grid gap-10 lg:grid-cols-4">
         <div>
-          <div className="mt-5 space-y-2 text-sm">
+          <h4 className="text-sm font-semibold uppercase tracking-wider text-white/60">Contact</h4>
+          <div className="mt-4 space-y-2 text-sm">
             <a href="tel:2076922415" className="flex items-center gap-2 hover:text-white">
               <Phone className="h-4 w-4" /> 207-692-2415
             </a>
