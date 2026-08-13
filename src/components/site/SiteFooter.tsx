@@ -121,12 +121,6 @@ export function SiteFooter() {
             </li>
             <li><Link to="/privacy-policy" className="text-white/80 hover:text-white">Privacy Policy</Link></li>
           </ul>
-          <Link
-            to="/schedule-assessment"
-            className="mt-6 inline-flex items-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-brand-deep hover:bg-white/90"
-          >
-            Free Assessment
-          </Link>
         </div>
       </div>
       <div className="border-t border-white/10">
