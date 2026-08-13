@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
-import logo from "@/assets/logo_transparent.png.asset.json";
 import { FacebookIcon, InstagramIcon, LinkedInIcon, XIcon } from "./SocialIcons";
 
 const industries = [
@@ -29,9 +28,7 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-brand-deep text-brand-foreground">
       <div className="container-page py-14 grid gap-10 lg:grid-cols-4">
         <div>
-          <div className="inline-flex items-center rounded-lg bg-white px-3 py-2">
-            <img src={logo.url} alt="Snow Pond Technology Group" className="h-14 w-auto" />
-          </div>
+          <h3 className="text-lg font-semibold text-white">Snow Pond Technology Group</h3>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">
             Locally owned in Oakland, Maine. Trusted technology partner to contractors and manufacturers across Central
             and Southern Maine.
