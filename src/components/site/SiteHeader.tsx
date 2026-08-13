@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/logo_transparent.png.asset.json";
+import logo from "@/assets/logo-transparent.png.asset.json";
 import { INDUSTRIES } from "@/data/industries";
 import { LOCATIONS } from "@/data/locations";
 
