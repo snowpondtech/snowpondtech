@@ -147,7 +147,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-border bg-background">
+        <div className="lg:hidden absolute top-full left-0 right-0 z-50 border-t border-border bg-background max-h-[calc(100vh-4rem)] overflow-y-auto shadow-lg">
           <div className="container-page py-4 flex flex-col gap-1">
             <Link
               to="/services"
