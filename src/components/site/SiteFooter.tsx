@@ -28,11 +28,6 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-brand-deep text-brand-foreground">
       <div className="container-page py-14 grid gap-10 lg:grid-cols-4">
         <div>
-          <h3 className="text-lg font-semibold text-white">Snow Pond Technology Group</h3>
-          <p className="mt-4 text-sm text-white/70 leading-relaxed">
-            Locally owned in Oakland, Maine. Trusted technology partner to contractors and manufacturers across Central
-            and Southern Maine.
-          </p>
           <div className="mt-5 space-y-2 text-sm">
             <a href="tel:2076922415" className="flex items-center gap-2 hover:text-white">
               <Phone className="h-4 w-4" /> 207-692-2415
@@ -126,12 +121,6 @@ export function SiteFooter() {
             </li>
             <li><Link to="/privacy-policy" className="text-white/80 hover:text-white">Privacy Policy</Link></li>
           </ul>
-          <Link
-            to="/schedule-assessment"
-            className="mt-6 inline-flex items-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-brand-deep hover:bg-white/90"
-          >
-            Free Assessment
-          </Link>
         </div>
       </div>
       <div className="border-t border-white/10">
