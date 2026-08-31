@@ -107,23 +107,6 @@ const contractorIndustries = [
   },
 ];
 
-const growthBenefits = [
-  "Add employees",
-  "Open new locations",
-  "Support remote workers",
-  "Handle higher call volumes",
-  "Improve customer service",
-  "Reduce communication bottlenecks",
-];
-
-const customerExperienceFeatures = [
-  "Automated attendants",
-  "Business hours routing",
-  "Department call routing",
-  "Call queues",
-  "Voicemail management",
-  "Mobile and remote worker integration",
-];
 
 const whyChooseUs = [
   "Locally owned and operated",
