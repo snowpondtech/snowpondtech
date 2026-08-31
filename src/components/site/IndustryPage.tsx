@@ -57,7 +57,7 @@ export function IndustryPage({
             </ul>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">What changes with Snow Pond Tech</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">What changes with Snow Pond Technology Group</p>
             <h2 className="mt-3 text-3xl font-semibold text-foreground">Real outcomes for your business</h2>
             <ul className="mt-6 space-y-4">
               {industry.outcomes.map((o) => (

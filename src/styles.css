@@ -43,7 +43,7 @@
 :root {
   --radius: 0.75rem;
 
-  /* Snow Pond Tech palette — deep Maine blues */
+  /* Snow Pond Technology Group palette — deep Maine blues */
   --brand: oklch(0.48 0.13 245);
   --brand-foreground: oklch(0.99 0.005 240);
   --brand-deep: oklch(0.28 0.09 250);

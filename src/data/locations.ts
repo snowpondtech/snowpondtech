@@ -14,7 +14,7 @@ export const LOCATIONS = [
     city: "Waterville",
     region: "Kennebec County",
     intro:
-      "Waterville is home to a growing mix of trades, engineering shops, and manufacturers. Snow Pond Tech is minutes away in Oakland — most of our clients see a familiar face on site, not a stranger.",
+      "Waterville is home to a growing mix of trades, engineering shops, and manufacturers. Snow Pond Technology Group is minutes away in Oakland — most of our clients see a familiar face on site, not a stranger.",
     localAngle:
       "From Kennedy Memorial Drive to the mills, we help Waterville and Winslow businesses cut downtime and keep field crews connected.",
     keywords: "IT Support Waterville Maine",

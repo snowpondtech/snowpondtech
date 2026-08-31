@@ -186,7 +186,7 @@ function ContactPage() {
             <div className="rounded-2xl border border-border overflow-hidden">
               <div className="aspect-[4/3] bg-brand-soft">
                 <iframe
-                  title="Snow Pond Tech office location"
+                  title="Snow Pond Technology Group office location"
                   className="w-full h-full"
                   loading="lazy"
                   src="https://www.google.com/maps?q=54+Main+St,+Ste+2B,+Oakland,+ME+04963&output=embed"
