@@ -45,7 +45,9 @@ function SchedulePage() {
             className="w-3/4 mx-auto rounded-2xl shadow-xl aspect-[16/9] object-cover"
           />
         }
-      />
+      >
+        <></>
+      </PageHero>
 
       <section className="py-20 lg:py-24">
         <div className="container-page max-w-3xl mx-auto">
