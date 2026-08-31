@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { CTASection } from "../components/site/CTASection";
-import { Handshake, HeartHandshake, MapPin, ShieldCheck, Sparkles, Users } from "lucide-react";
 import { LinkedInIcon } from "../components/site/SocialIcons";
 import ownerHeadshot from "@/assets/owner-headshot.jpg.asset.json";
 import badge365 from "@/assets/365-badge.png.asset.json";
@@ -45,15 +44,6 @@ const coreValues = [
   { title: "Proactive Service", body: "We prevent problems whenever possible rather than simply reacting when things break." },
   { title: "Relationships Matter", body: "We build long-term partnerships based on trust, responsiveness, and genuine care for our clients' success." },
   { title: "Lifelong Learning", body: "Technology constantly evolves. We continuously improve our knowledge, skills, and processes to better serve our clients." },
-];
-
-const values = [
-  { icon: MapPin, title: "Local and rooted in Maine", body: "Oakland-based, working with businesses we can drive to. When you call, you talk to someone who knows the state, the seasons, and the way work gets done here." },
-  { icon: Handshake, title: "Long-term partnerships", body: "We aren't chasing logos. We take on a small number of clients and grow with them, learning their business inside and out." },
-  { icon: HeartHandshake, title: "Personalized service", body: "You get a dedicated advisor and a team that recognizes your voice. No ticket-number black holes, no overseas call centers." },
-  { icon: ShieldCheck, title: "Straight talk", body: "We won't sell you things you don't need. If a simpler answer solves the problem, that's what we'll recommend." },
-  { icon: Users, title: "Focused on your people", body: "Owners, office staff, shop floor, and field crews all use different tools in different conditions. Good IT works for all of them." },
-  { icon: Sparkles, title: "Built for growth", body: "We think two, three, five years ahead — so hiring, opening a new location, or taking on bigger jobs doesn't blow up the tech." },
 ];
 
 function AboutPage() {
@@ -132,26 +122,6 @@ function AboutPage() {
                 Connect on LinkedIn
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 lg:py-24 bg-brand-soft/50 border-y border-border">
-        <div className="container-page">
-          <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">What we stand for</p>
-            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-foreground">How we work with clients</h2>
-          </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {values.map((v) => (
-              <div key={v.title} className="rounded-2xl border border-border bg-card p-6">
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand/10 text-brand">
-                  <v.icon className="h-5 w-5" />
-                </div>
-                <h3 className="mt-5 text-lg font-semibold text-foreground">{v.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{v.body}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
