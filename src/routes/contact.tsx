@@ -36,7 +36,15 @@ function ContactPage() {
     <>
       <PageHero
         title="Contact Us"
-        description="Have a question? Need to reach our team? Use the form below for general inquiries and we'll get back to you as soon as possible. Looking for IT guidance, cybersecurity advice, or a technology review? Request a Free Assessment instead."
+        description={
+          <>
+            Have a question? Need to reach our team? Use the form below for general inquiries and we'll get back to you as soon as possible. Looking for IT guidance, cybersecurity advice, or a technology review? Request a{" "}
+            <Link to="/schedule-assessment" className="underline hover:text-white">
+              Free Assessment
+            </Link>{" "}
+            instead.
+          </>
+        }
       >
         <></>
       </PageHero>
