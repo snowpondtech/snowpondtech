@@ -1,26 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { PageHero } from "../components/site/PageHero";
-import { CTASection } from "../components/site/CTASection";
 import {
-  ArrowRight,
   BadgeCheck,
-  Building2,
   CalendarCheck,
   CloudSun,
   Factory,
   Fan,
-  HardHat,
-  Headphones,
   Mail,
   MapPin,
-  MessageSquare,
   Phone,
   PhoneCall,
-  Route as RouteIcon,
   ShieldCheck,
-  TrendingUp,
-  Users,
   Zap,
 } from "lucide-react";
 
@@ -116,23 +107,6 @@ const contractorIndustries = [
   },
 ];
 
-const growthBenefits = [
-  "Add employees",
-  "Open new locations",
-  "Support remote workers",
-  "Handle higher call volumes",
-  "Improve customer service",
-  "Reduce communication bottlenecks",
-];
-
-const customerExperienceFeatures = [
-  "Automated attendants",
-  "Business hours routing",
-  "Department call routing",
-  "Call queues",
-  "Voicemail management",
-  "Mobile and remote worker integration",
-];
 
 const whyChooseUs = [
   "Locally owned and operated",
@@ -150,7 +124,9 @@ function BusinessCommunicationsPage() {
         eyebrow="Services"
         title="Modern Business Communications for Maine Contractors and Manufacturers"
         description="Keep your office, field teams, and customers connected from anywhere."
-      />
+      >
+        <></>
+      </PageHero>
 
       <section className="py-16 lg:py-20">
         <div className="container-page max-w-3xl">
@@ -166,14 +142,6 @@ function BusinessCommunicationsPage() {
             employees can stay productive and customers can reach you when it
             matters most.
           </p>
-          <div className="mt-8">
-            <Link
-              to="/schedule-assessment"
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-brand px-6 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
-            >
-                <CalendarCheck className="h-4 w-4" /> Free Assessment
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -276,58 +244,6 @@ function BusinessCommunicationsPage() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-20">
-        <div className="container-page grid lg:grid-cols-2 gap-12 items-start">
-          <div className="rounded-2xl border border-border bg-card p-6 lg:p-8">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand/10 text-brand">
-              <TrendingUp className="h-5 w-5" />
-            </div>
-            <h2 className="mt-4 text-2xl font-semibold text-foreground">
-              Support Business Growth
-            </h2>
-            <p className="mt-3 text-muted-foreground leading-relaxed">
-              As your business grows, your communication systems should grow with
-              you. Modern communication platforms make it easier to:
-            </p>
-            <ul className="mt-5 space-y-3">
-              {growthBenefits.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <ArrowRight className="mt-0.5 h-5 w-5 text-brand flex-shrink-0" />
-                  <span className="text-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 text-foreground">
-              Instead of replacing aging phone equipment every few years, your
-              communication platform can scale alongside your business.
-            </p>
-          </div>
-          <div>
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand/10 text-brand">
-              <Headphones className="h-5 w-5" />
-            </div>
-            <h2 className="mt-4 text-2xl font-semibold text-foreground">
-              Improve Customer Experience
-            </h2>
-            <p className="mt-3 text-muted-foreground leading-relaxed">
-              Customers expect to reach the right person quickly. We help
-              businesses create professional call experiences through:
-            </p>
-            <ul className="mt-5 space-y-3">
-              {customerExperienceFeatures.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <BadgeCheck className="mt-0.5 h-5 w-5 text-brand flex-shrink-0" />
-                  <span className="text-foreground">{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-6 text-foreground">
-              The result is a better experience for both customers and
-              employees.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section className="py-16 hero-grid-bg text-white">
         <div className="container-page">
@@ -414,10 +330,6 @@ function BusinessCommunicationsPage() {
         </div>
       </section>
 
-      <CTASection
-        title="Ready for Better Business Communications?"
-        subtitle="Whether you're replacing an outdated phone system, supporting a mobile workforce, or improving communication across your organization, Snow Pond Technology Group can help."
-      />
 
     </>
   );
