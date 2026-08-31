@@ -129,7 +129,7 @@ export function SiteFooter() {
         <div className="container-page py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
           <p>© {new Date().getFullYear()} Snow Pond Technology Group Inc. All rights reserved.</p>
           <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
-            {["Oakland", "Waterville", "Augusta", "Bangor", "Portland", "Lewiston-Auburn"].map(
+            {["Augusta", "Waterville", "Bangor", "Lewiston-Auburn", "Portland"].map(
               (city, i, arr) => (
                 <span key={city} className="inline-flex items-center gap-2">
                   {city}
