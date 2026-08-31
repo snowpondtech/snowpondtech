@@ -5,10 +5,10 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon, XIcon } from "./SocialIcons"
 const industries = [
   ["hvac-contractors", "HVAC Contractors"],
   ["electrical-contractors", "Electrical Contractors"],
+  ["general-contractors", "General Contractors"],
   ["landscaping-contractors", "Landscaping Contractors"],
   ["manufacturing", "Manufacturing"],
   ["engineering-firms", "Engineering Firms"],
-  ["general-contractors", "General Contractors"],
 ] as const;
 
 const locations = [
