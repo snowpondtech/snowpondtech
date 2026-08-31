@@ -230,7 +230,7 @@ function HomePage() {
           <div className="grid grid-cols-2 gap-4">
             {[
               ["30-min", "Free technology assessment"],
-              ["9 cities", "Served across Central & Southern Maine"],
+              ["5 cities", "Served across Central & Southern Maine"],
               ["100%", "Locally owned in Oakland, ME"],
               ["22 Years", "Serving Maine businesses since 2004"],
             ].map(([big, small]) => (
