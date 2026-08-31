@@ -14,13 +14,10 @@ const industries = [
 const locations = [
   ["augusta", "Augusta"],
   ["waterville", "Waterville"],
-  ["newport", "Newport"],
   ["bangor", "Bangor"],
   ["lewiston", "Lewiston"],
   ["auburn", "Auburn"],
-  ["brunswick", "Brunswick"],
   ["portland", "Portland"],
-  ["biddeford", "Biddeford"],
 ] as const;
 
 export function SiteFooter() {
