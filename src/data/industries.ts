@@ -1,24 +1,5 @@
 export const INDUSTRIES = [
   {
-    slug: "hvac-contractors",
-    name: "HVAC Contractors",
-    short: "HVAC",
-    hero:
-      "Keep dispatch, technicians, and the office moving as one — with technology that holds up on the job site and in the shop.",
-    challenges: [
-      "Field technicians losing time on slow or dropped connections between the truck and the office",
-      "Service software, scheduling, and estimating tools that aren't tied together",
-      "Owners worried about ransomware locking up dispatch during peak season",
-      "Cyber insurance renewals that now demand MFA, backups, and endpoint protection",
-    ],
-    outcomes: [
-      "Technicians close more calls per day with reliable mobile access",
-      "Dispatchers see real-time job status without chasing phone calls",
-      "Payroll, invoicing, and service reports flow without duplicate entry",
-      "Owners sleep at night knowing systems are backed up and monitored",
-    ],
-  },
-  {
     slug: "electrical-contractors",
     name: "Electrical Contractors",
     short: "Electrical",
@@ -35,6 +16,44 @@ export const INDUSTRIES = [
       "Consistent laptops and phones set up the same way for every new hire",
       "Cyber insurance requirements met without a scramble at renewal time",
       "A single point of contact who understands your business, not just your servers",
+    ],
+  },
+  {
+    slug: "general-contractors",
+    name: "General Contractors",
+    short: "General Contractors",
+    hero:
+      "From the trailer to the trades to the front office — we help GCs run cleaner projects with less technology drag.",
+    challenges: [
+      "Project managers stitching together email, spreadsheets, and PM software",
+      "Subcontractors and clients needing safe ways to share plans and documents",
+      "Job trailers with no reliable internet or printing",
+      "Financial and bid data that would be devastating to lose or leak",
+    ],
+    outcomes: [
+      "Standardized tools and access for every PM, super, and admin",
+      "Reliable connectivity and printing on active job sites",
+      "Documented backup and recovery you can prove to insurers",
+      "A steady technology partner as your company takes on bigger work",
+    ],
+  },
+  {
+    slug: "hvac-contractors",
+    name: "HVAC Contractors",
+    short: "HVAC",
+    hero:
+      "Keep dispatch, technicians, and the office moving as one — with technology that holds up on the job site and in the shop.",
+    challenges: [
+      "Field technicians losing time on slow or dropped connections between the truck and the office",
+      "Service software, scheduling, and estimating tools that aren't tied together",
+      "Owners worried about ransomware locking up dispatch during peak season",
+      "Cyber insurance renewals that now demand MFA, backups, and endpoint protection",
+    ],
+    outcomes: [
+      "Technicians close more calls per day with reliable mobile access",
+      "Dispatchers see real-time job status without chasing phone calls",
+      "Payroll, invoicing, and service reports flow without duplicate entry",
+      "Owners sleep at night knowing systems are backed up and monitored",
     ],
   },
   {
@@ -57,25 +76,6 @@ export const INDUSTRIES = [
     ],
   },
   {
-    slug: "manufacturing",
-    name: "Manufacturing",
-    short: "Manufacturing",
-    hero:
-      "In a shop, minutes matter. We keep your ERP, machines, and office systems running so production doesn't stop.",
-    challenges: [
-      "Line-of-business software (ERP, MRP, quoting) that can't afford downtime",
-      "Shop floor PCs and machines on aging, unsupported operating systems",
-      "Rising cybersecurity threats specifically targeting small manufacturers",
-      "Customers and primes demanding proof of security controls to keep contracts",
-    ],
-    outcomes: [
-      "Proactive monitoring that catches issues before production stops",
-      "A cybersecurity posture that satisfies customers, primes, and insurers",
-      "Faster onboarding for new shop and office staff",
-      "A clear technology roadmap tied to your growth plans, not vendor pitches",
-    ],
-  },
-  {
     slug: "engineering-firms",
     name: "Engineering Firms",
     short: "Engineering",
@@ -95,22 +95,22 @@ export const INDUSTRIES = [
     ],
   },
   {
-    slug: "general-contractors",
-    name: "General Contractors",
-    short: "General Contractors",
+    slug: "manufacturing",
+    name: "Manufacturing",
+    short: "Manufacturing",
     hero:
-      "From the trailer to the trades to the front office — we help GCs run cleaner projects with less technology drag.",
+      "In a shop, minutes matter. We keep your ERP, machines, and office systems running so production doesn't stop.",
     challenges: [
-      "Project managers stitching together email, spreadsheets, and PM software",
-      "Subcontractors and clients needing safe ways to share plans and documents",
-      "Job trailers with no reliable internet or printing",
-      "Financial and bid data that would be devastating to lose or leak",
+      "Line-of-business software (ERP, MRP, quoting) that can't afford downtime",
+      "Shop floor PCs and machines on aging, unsupported operating systems",
+      "Rising cybersecurity threats specifically targeting small manufacturers",
+      "Customers and primes demanding proof of security controls to keep contracts",
     ],
     outcomes: [
-      "Standardized tools and access for every PM, super, and admin",
-      "Reliable connectivity and printing on active job sites",
-      "Documented backup and recovery you can prove to insurers",
-      "A steady technology partner as your company takes on bigger work",
+      "Proactive monitoring that catches issues before production stops",
+      "A cybersecurity posture that satisfies customers, primes, and insurers",
+      "Faster onboarding for new shop and office staff",
+      "A clear technology roadmap tied to your growth plans, not vendor pitches",
     ],
   },
 ] as const;
