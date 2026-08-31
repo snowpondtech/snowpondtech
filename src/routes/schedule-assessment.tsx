@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { Turnstile } from "../components/site/Turnstile";
-import { CheckCircle2, Mail, Phone } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import assessmentImage from "../assets/TechnologyAssessment.png.asset.json";
 
