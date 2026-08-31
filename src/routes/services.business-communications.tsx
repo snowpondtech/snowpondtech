@@ -419,16 +419,6 @@ function BusinessCommunicationsPage() {
         subtitle="Whether you're replacing an outdated phone system, supporting a mobile workforce, or improving communication across your organization, Snow Pond Technology Group can help."
       />
 
-      <section className="py-10 border-t border-border">
-        <div className="container-page text-center">
-          <p className="text-sm text-muted-foreground">
-            <MapPin className="inline h-4 w-4 -mt-0.5 mr-1 text-brand" />
-            Serving Waterville, Augusta, Newport, Bangor, Lewiston-Auburn,
-            Brunswick, Portland, Biddeford, and surrounding communities throughout
-            Central and Southern Maine.
-          </p>
-        </div>
-      </section>
     </>
   );
 }
