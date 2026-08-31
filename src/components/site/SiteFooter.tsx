@@ -126,9 +126,18 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-page py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60">
+        <div className="container-page py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/60">
           <p>© {new Date().getFullYear()} Snow Pond Technology Group Inc. All rights reserved.</p>
-          <p>Oakland · Waterville · Augusta · Bangor · Portland · Lewiston-Auburn</p>
+          <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+            {["Oakland", "Waterville", "Augusta", "Bangor", "Portland", "Lewiston-Auburn"].map(
+              (city, i, arr) => (
+                <span key={city} className="inline-flex items-center gap-2">
+                  {city}
+                  {i < arr.length - 1 && <span className="text-white/40">·</span>}
+                </span>
+              )
+            )}
+          </div>
         </div>
       </div>
     </footer>
