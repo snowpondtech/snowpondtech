@@ -356,10 +356,6 @@ function BusinessCommunicationsPage() {
         </div>
       </section>
 
-      <CTASection
-        title="Ready for Better Business Communications?"
-        subtitle="Whether you're replacing an outdated phone system, supporting a mobile workforce, or improving communication across your organization, Snow Pond Technology Group can help."
-      />
 
     </>
   );
