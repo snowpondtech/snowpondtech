@@ -137,8 +137,7 @@ function BusinessCommunicationsPage() {
             Communication Challenges We Help Solve
           </h2>
           <p className="mt-3 max-w-2xl text-muted-foreground">
-            Many growing businesses struggle with communication systems that no
-            longer fit the way they work today.
+            Many growing businesses struggle with communication systems that no longer fit the way they work today.
           </p>
           <p className="mt-6 text-foreground font-medium">Common issues include:</p>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2">
