@@ -150,7 +150,9 @@ function BusinessCommunicationsPage() {
         eyebrow="Services"
         title="Modern Business Communications for Maine Contractors and Manufacturers"
         description="Keep your office, field teams, and customers connected from anywhere."
-      />
+      >
+        <></>
+      </PageHero>
 
       <section className="py-16 lg:py-20">
         <div className="container-page max-w-3xl">
