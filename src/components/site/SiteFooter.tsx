@@ -4,8 +4,8 @@ import { FacebookIcon, InstagramIcon, LinkedInIcon, XIcon } from "./SocialIcons"
 
 const industries = [
   ["electrical-contractors", "Electrical Contractors"],
-  ["hvac-contractors", "HVAC Contractors"],
   ["general-contractors", "General Contractors"],
+  ["hvac-contractors", "HVAC Contractors"],
   ["landscaping-contractors", "Landscaping Contractors"],
   ["engineering-firms", "Engineering Firms"],
   ["manufacturing", "Manufacturing"],
