@@ -7,8 +7,8 @@ const industries = [
   ["electrical-contractors", "Electrical Contractors"],
   ["general-contractors", "General Contractors"],
   ["landscaping-contractors", "Landscaping Contractors"],
-  ["manufacturing", "Manufacturing"],
   ["engineering-firms", "Engineering Firms"],
+  ["manufacturing", "Manufacturing"],
 ] as const;
 
 const locations = [
