@@ -39,6 +39,14 @@ const affiliations = [
   { name: "National Society of IT Service Providers", url: "https://nsitsp.org/", logo: nsitsp },
 ];
 
+const coreValues = [
+  { title: "Security First", body: "We prioritize the protection of our clients' businesses, data, and people in every recommendation we make." },
+  { title: "Integrity Without Compromise", body: "We do the right thing, communicate honestly, and stand behind our work." },
+  { title: "Proactive Service", body: "We prevent problems whenever possible rather than simply reacting when things break." },
+  { title: "Relationships Matter", body: "We build long-term partnerships based on trust, responsiveness, and genuine care for our clients' success." },
+  { title: "Lifelong Learning", body: "Technology constantly evolves. We continuously improve our knowledge, skills, and processes to better serve our clients." },
+];
+
 const values = [
   { icon: MapPin, title: "Local and rooted in Maine", body: "Oakland-based, working with businesses we can drive to. When you call, you talk to someone who knows the state, the seasons, and the way work gets done here." },
   { icon: Handshake, title: "Long-term partnerships", body: "We aren't chasing logos. We take on a small number of clients and grow with them, learning their business inside and out." },
@@ -141,6 +149,42 @@ function AboutPage() {
                   <v.icon className="h-5 w-5" />
                 </div>
                 <h3 className="mt-5 text-lg font-semibold text-foreground">{v.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{v.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-24">
+        <div className="container-page grid lg:grid-cols-2 gap-10">
+          <div className="rounded-2xl border border-border bg-card p-8 lg:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Our Mission</p>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-foreground">Protect and empower Maine businesses</h2>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              To protect and empower Maine businesses through secure, reliable technology and trusted IT leadership.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-8 lg:p-10">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Our Vision</p>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-foreground">The most trusted IT partner in Maine</h2>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              To become the most trusted IT and cybersecurity partner for small businesses throughout Maine.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-24 bg-brand-soft/50 border-y border-border">
+        <div className="container-page">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Our Core Values</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-foreground">What guides our work every day</h2>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {coreValues.map((v) => (
+              <div key={v.title} className="rounded-2xl border border-border bg-card p-6">
+                <h3 className="text-lg font-semibold text-foreground">{v.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{v.body}</p>
               </div>
             ))}
