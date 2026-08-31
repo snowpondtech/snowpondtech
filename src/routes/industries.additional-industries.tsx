@@ -276,7 +276,7 @@ function AdditionalIndustriesPage() {
                 </a>
               </p>
               <p className="mt-3">
-                Serving businesses throughout Waterville, Augusta, Newport, Bangor, Lewiston, Auburn, Brunswick, Portland, Biddeford, and surrounding communities across Central and Southern Maine.
+                Serving businesses throughout Waterville, Augusta, Newport, Bangor, Lewiston-Auburn, Brunswick, Portland, Biddeford, and surrounding communities across Central and Southern Maine.
               </p>
             </div>
           </div>
