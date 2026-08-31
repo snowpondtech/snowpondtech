@@ -8,6 +8,7 @@ import midMaineChamber from "@/assets/midmaine-chamber-logo.png.asset.json";
 import kennebecValleyChamber from "@/assets/kennebec-valley-chamber-logo.png.asset.json";
 import asciiGroup from "@/assets/ascii-group-logo.png.asset.json";
 import nsitsp from "@/assets/nsitsp-logo.png.asset.json";
+import oaklandAerial from "@/assets/oakland-maine-aerial.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -53,6 +54,13 @@ function AboutPage() {
         eyebrow="About Snow Pond Technology Group"
         title="A Maine technology partner that thinks like an owner"
         description="Snow Pond Technology Group is a locally owned company based in Oakland, Maine. We help contractors and manufacturers across Central and Southern Maine turn technology from a source of frustration into a competitive advantage."
+        media={
+          <img
+            src={oaklandAerial.url}
+            alt="Aerial view of downtown Oakland, Maine"
+            className="w-full max-w-xl rounded-2xl shadow-xl object-cover"
+          />
+        }
       />
 
       <section className="py-20 lg:py-24">
