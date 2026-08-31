@@ -22,6 +22,7 @@ import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesBusinessCommunicationsRouteImport } from './routes/services.business-communications'
 import { Route as LocationsWatervilleRouteImport } from './routes/locations.waterville'
 import { Route as LocationsPortlandRouteImport } from './routes/locations.portland'
+import { Route as LocationsLewistonAuburnRouteImport } from './routes/locations.lewiston-auburn'
 import { Route as LocationsLewistonRouteImport } from './routes/locations.lewiston'
 import { Route as LocationsBangorRouteImport } from './routes/locations.bangor'
 import { Route as LocationsAugustaRouteImport } from './routes/locations.augusta'
@@ -98,6 +99,11 @@ const LocationsWatervilleRoute = LocationsWatervilleRouteImport.update({
 const LocationsPortlandRoute = LocationsPortlandRouteImport.update({
   id: '/portland',
   path: '/portland',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsLewistonAuburnRoute = LocationsLewistonAuburnRouteImport.update({
+  id: '/lewiston-auburn',
+  path: '/lewiston-auburn',
   getParentRoute: () => LocationsRoute,
 } as any)
 const LocationsLewistonRoute = LocationsLewistonRouteImport.update({
@@ -183,6 +189,7 @@ export interface FileRoutesByFullPath {
   '/locations/augusta': typeof LocationsAugustaRoute
   '/locations/bangor': typeof LocationsBangorRoute
   '/locations/lewiston': typeof LocationsLewistonRoute
+  '/locations/lewiston-auburn': typeof LocationsLewistonAuburnRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
@@ -208,6 +215,7 @@ export interface FileRoutesByTo {
   '/locations/augusta': typeof LocationsAugustaRoute
   '/locations/bangor': typeof LocationsBangorRoute
   '/locations/lewiston': typeof LocationsLewistonRoute
+  '/locations/lewiston-auburn': typeof LocationsLewistonAuburnRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
@@ -235,6 +243,7 @@ export interface FileRoutesById {
   '/locations/augusta': typeof LocationsAugustaRoute
   '/locations/bangor': typeof LocationsBangorRoute
   '/locations/lewiston': typeof LocationsLewistonRoute
+  '/locations/lewiston-auburn': typeof LocationsLewistonAuburnRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
@@ -263,6 +272,7 @@ export interface FileRouteTypes {
     | '/locations/augusta'
     | '/locations/bangor'
     | '/locations/lewiston'
+    | '/locations/lewiston-auburn'
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
@@ -288,6 +298,7 @@ export interface FileRouteTypes {
     | '/locations/augusta'
     | '/locations/bangor'
     | '/locations/lewiston'
+    | '/locations/lewiston-auburn'
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
@@ -314,6 +325,7 @@ export interface FileRouteTypes {
     | '/locations/augusta'
     | '/locations/bangor'
     | '/locations/lewiston'
+    | '/locations/lewiston-auburn'
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
@@ -425,6 +437,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationsPortlandRouteImport
       parentRoute: typeof LocationsRoute
     }
+    '/locations/lewiston-auburn': {
+      id: '/locations/lewiston-auburn'
+      path: '/lewiston-auburn'
+      fullPath: '/locations/lewiston-auburn'
+      preLoaderRoute: typeof LocationsLewistonAuburnRouteImport
+      parentRoute: typeof LocationsRoute
+    }
     '/locations/lewiston': {
       id: '/locations/lewiston'
       path: '/lewiston'
@@ -534,6 +553,7 @@ interface LocationsRouteChildren {
   LocationsAugustaRoute: typeof LocationsAugustaRoute
   LocationsBangorRoute: typeof LocationsBangorRoute
   LocationsLewistonRoute: typeof LocationsLewistonRoute
+  LocationsLewistonAuburnRoute: typeof LocationsLewistonAuburnRoute
   LocationsPortlandRoute: typeof LocationsPortlandRoute
   LocationsWatervilleRoute: typeof LocationsWatervilleRoute
 }
@@ -543,6 +563,7 @@ const LocationsRouteChildren: LocationsRouteChildren = {
   LocationsAugustaRoute: LocationsAugustaRoute,
   LocationsBangorRoute: LocationsBangorRoute,
   LocationsLewistonRoute: LocationsLewistonRoute,
+  LocationsLewistonAuburnRoute: LocationsLewistonAuburnRoute,
   LocationsPortlandRoute: LocationsPortlandRoute,
   LocationsWatervilleRoute: LocationsWatervilleRoute,
 }
