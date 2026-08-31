@@ -5,6 +5,10 @@ import { Handshake, HeartHandshake, MapPin, ShieldCheck, Sparkles, Users } from 
 import { LinkedInIcon } from "../components/site/SocialIcons";
 import ownerHeadshot from "@/assets/owner-headshot.jpg.asset.json";
 import badge365 from "@/assets/365-badge.png.asset.json";
+import midMaineChamber from "@/assets/midmaine-chamber-logo.png.asset.json";
+import kennebecValleyChamber from "@/assets/kennebec-valley-chamber-logo.png.asset.json";
+import asciiGroup from "@/assets/ascii-group-logo.png.asset.json";
+import nsitsp from "@/assets/nsitsp-logo.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -132,6 +136,40 @@ function AboutPage() {
                 <h3 className="mt-5 text-lg font-semibold text-foreground">{v.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{v.body}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-24">
+        <div className="container-page">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">Memberships & affiliations</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-foreground">
+              Connected to the communities and industries we serve
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              We're active members of the organizations that matter to Maine businesses and the IT profession — keeping us
+              plugged into local networks and national best practices.
+            </p>
+          </div>
+          <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+            {affiliations.map((a) => (
+              <a
+                key={a.name}
+                href={a.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group flex flex-col items-center justify-center rounded-2xl border border-border bg-card p-6 transition-colors hover:border-brand/40 hover:bg-brand-soft/40"
+              >
+                <img
+                  src={a.logo.url}
+                  alt={`${a.name} logo`}
+                  className="h-20 w-full object-contain"
+                  loading="lazy"
+                />
+                <span className="mt-4 text-center text-xs font-medium text-muted-foreground leading-snug">{a.name}</span>
+              </a>
             ))}
           </div>
         </div>
