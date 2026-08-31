@@ -15,8 +15,7 @@ const locations = [
   ["augusta", "Augusta"],
   ["waterville", "Waterville"],
   ["bangor", "Bangor"],
-  ["lewiston", "Lewiston"],
-  ["auburn", "Auburn"],
+  ["lewiston-auburn", "Lewiston-Auburn"],
   ["portland", "Portland"],
 ] as const;
 
