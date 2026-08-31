@@ -1,26 +1,17 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import { PageHero } from "../components/site/PageHero";
-import { CTASection } from "../components/site/CTASection";
 import {
-  ArrowRight,
   BadgeCheck,
-  Building2,
   CalendarCheck,
   CloudSun,
   Factory,
   Fan,
-  HardHat,
-  Headphones,
   Mail,
   MapPin,
-  MessageSquare,
   Phone,
   PhoneCall,
-  Route as RouteIcon,
   ShieldCheck,
-  TrendingUp,
-  Users,
   Zap,
 } from "lucide-react";
 
