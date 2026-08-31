@@ -9,7 +9,7 @@ import assessmentImage from "../assets/TechnologyAssessment.png.asset.json";
 export const Route = createFileRoute("/schedule-assessment")({
   head: () => ({
     meta: [
-      { title: "Schedule a Free Technology Assessment | Snow Pond Tech" },
+      { title: "Schedule a Free Technology Assessment | Snow Pond Technology Group" },
       {
         name: "description",
         content:

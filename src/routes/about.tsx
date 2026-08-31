@@ -41,7 +41,7 @@ function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Snow Pond Tech"
+        eyebrow="About Snow Pond Technology Group"
         title="A Maine technology partner that thinks like an owner"
         description="Snow Pond Technology Group is a locally owned company based in Oakland, Maine. We help contractors and manufacturers across Central and Southern Maine turn technology from a source of frustration into a competitive advantage."
       />
@@ -75,7 +75,7 @@ function AboutPage() {
                 className="h-28 w-28 shrink-0 object-contain"
               />
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Snow Pond Tech is a proud member of the <span className="font-semibold text-foreground">365 Small Business Circle</span>,
+                Snow Pond Technology Group is a proud member of the <span className="font-semibold text-foreground">365 Small Business Circle</span>,
                 giving back to our community in partnership with <span className="font-semibold text-foreground">United Way Kennebec Valley</span>.
               </p>
             </div>

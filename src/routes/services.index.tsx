@@ -21,7 +21,7 @@ import {
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "IT Services for Maine Contractors & Manufacturers | Snow Pond Tech" },
+      { title: "IT Services for Maine Contractors & Manufacturers | Snow Pond Technology Group" },
       {
         name: "description",
         content:

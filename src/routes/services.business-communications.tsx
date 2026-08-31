@@ -29,7 +29,7 @@ export const Route = createFileRoute("/services/business-communications")({
     meta: [
       {
         title:
-          "Business Communications for Maine Contractors & Manufacturers | Snow Pond Tech",
+          "Business Communications for Maine Contractors & Manufacturers | Snow Pond Technology Group",
       },
       {
         name: "description",
@@ -354,7 +354,7 @@ function BusinessCommunicationsPage() {
         <div className="container-page grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
-              Why Snow Pond Tech
+              Why Snow Pond Technology Group
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-foreground">
               Why Businesses Choose Snow Pond Technology Group
