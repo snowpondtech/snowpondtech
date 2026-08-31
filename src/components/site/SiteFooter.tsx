@@ -99,7 +99,7 @@ export function SiteFooter() {
 
         <div>
           <h4 className="text-sm font-semibold uppercase tracking-wider text-white/60">Service Area</h4>
-          <ul className="mt-4 grid grid-cols-2 gap-y-2 text-sm">
+          <ul className="mt-4 space-y-2 text-sm">
             {locations.map(([slug, label]) => (
               <li key={slug}>
                 <Link to={`/locations/${slug}`} className="text-white/80 hover:text-white">
