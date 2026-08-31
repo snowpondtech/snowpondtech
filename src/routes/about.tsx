@@ -4,6 +4,7 @@ import { CTASection } from "../components/site/CTASection";
 import { Handshake, HeartHandshake, MapPin, ShieldCheck, Sparkles, Users } from "lucide-react";
 import { LinkedInIcon } from "../components/site/SocialIcons";
 import ownerHeadshot from "@/assets/owner-headshot.jpg.asset.json";
+import badge365 from "@/assets/365-badge.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -65,6 +66,17 @@ function AboutPage() {
               <p>
                 That's the role we play. Strategy, security, and steady day-to-day support — from a team that
                 genuinely cares about your success.
+              </p>
+            </div>
+            <div className="mt-8 flex items-center gap-5 rounded-2xl border border-border bg-card p-5">
+              <img
+                src={badge365.url}
+                alt="365 Small Business Circle Member, United Way Kennebec Valley"
+                className="h-28 w-28 shrink-0 object-contain"
+              />
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Snow Pond Tech is a proud member of the <span className="font-semibold text-foreground">365 Small Business Circle</span>,
+                giving back to our community in partnership with <span className="font-semibold text-foreground">United Way Kennebec Valley</span>.
               </p>
             </div>
           </div>
