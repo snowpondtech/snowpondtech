@@ -30,24 +30,14 @@ export const LOCATIONS = [
     keywords: "Managed IT Services Bangor Maine",
   },
   {
-    slug: "lewiston",
-    city: "Lewiston",
+    slug: "lewiston-auburn",
+    city: "Lewiston-Auburn",
     region: "Androscoggin County",
     intro:
-      "Lewiston has one of Maine's densest manufacturing and trades communities. Owners here know how expensive downtime and a bad cyber event can be.",
+      "Lewiston and Auburn — the Twin Cities, split only by the Androscoggin River — make up one of Maine's densest manufacturing and trades communities. Owners here know how expensive downtime and a bad cyber event can be.",
     localAngle:
-      "We work with Lewiston shops and contractors on cybersecurity, backup, and day-to-day IT that actually holds up in production environments.",
-    keywords: "IT Services Lewiston Maine",
-  },
-  {
-    slug: "auburn",
-    city: "Auburn",
-    region: "Androscoggin County",
-    intro:
-      "Auburn's industrial corridor is home to fabricators, distributors, and contractors that keep the region building. Their technology needs to keep up.",
-    localAngle:
-      "We support Auburn manufacturers and contractors with proactive monitoring, cybersecurity, and a real human on the phone when something breaks.",
-    keywords: "IT Services Auburn Maine",
+      "We work with shops, fabricators, distributors, and contractors on both sides of the river on cybersecurity, backup, and day-to-day IT that actually holds up in production environments.",
+    keywords: "IT Services Lewiston Auburn Maine",
   },
   {
     slug: "portland",

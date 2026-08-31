@@ -209,7 +209,7 @@ function ContactPage() {
             <div className="rounded-2xl border border-border bg-card p-6">
               <p className="font-semibold text-foreground">Service area</p>
               <p className="mt-1 text-sm text-muted-foreground">
-                Waterville · Augusta · Newport · Bangor · Lewiston · Auburn · Brunswick · Portland · Biddeford
+                Waterville · Augusta · Newport · Bangor · Lewiston-Auburn · Brunswick · Portland · Biddeford
               </p>
             </div>
           </div>

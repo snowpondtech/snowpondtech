@@ -15,8 +15,7 @@ const locations = [
   ["augusta", "Augusta"],
   ["waterville", "Waterville"],
   ["bangor", "Bangor"],
-  ["lewiston", "Lewiston"],
-  ["auburn", "Auburn"],
+  ["lewiston-auburn", "Lewiston-Auburn"],
   ["portland", "Portland"],
 ] as const;
 
@@ -129,7 +128,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="container-page py-5 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/60">
           <p>© {new Date().getFullYear()} Snow Pond Technology Group Inc. All rights reserved.</p>
-          <p>Oakland · Waterville · Augusta · Bangor · Portland · Lewiston</p>
+          <p>Oakland · Waterville · Augusta · Bangor · Portland · Lewiston-Auburn</p>
         </div>
       </div>
     </footer>

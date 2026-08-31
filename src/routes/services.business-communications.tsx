@@ -423,7 +423,7 @@ function BusinessCommunicationsPage() {
         <div className="container-page text-center">
           <p className="text-sm text-muted-foreground">
             <MapPin className="inline h-4 w-4 -mt-0.5 mr-1 text-brand" />
-            Serving Waterville, Augusta, Newport, Bangor, Lewiston, Auburn,
+            Serving Waterville, Augusta, Newport, Bangor, Lewiston-Auburn,
             Brunswick, Portland, Biddeford, and surrounding communities throughout
             Central and Southern Maine.
           </p>
