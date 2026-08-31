@@ -32,6 +32,13 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
+const affiliations = [
+  { name: "Mid-Maine Chamber of Commerce", url: "https://www.midmainechamber.com/", logo: midMaineChamber },
+  { name: "Kennebec Valley Chamber of Commerce", url: "https://kennebecvalleychamber.com/", logo: kennebecValleyChamber },
+  { name: "The ASCII Group", url: "https://www.ascii.com/", logo: asciiGroup },
+  { name: "National Society of IT Service Providers", url: "https://nsitsp.org/", logo: nsitsp },
+];
+
 const values = [
   { icon: MapPin, title: "Local and rooted in Maine", body: "Oakland-based, working with businesses we can drive to. When you call, you talk to someone who knows the state, the seasons, and the way work gets done here." },
   { icon: Handshake, title: "Long-term partnerships", body: "We aren't chasing logos. We take on a small number of clients and grow with them, learning their business inside and out." },
