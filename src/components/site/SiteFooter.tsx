@@ -36,9 +36,14 @@ export function SiteFooter() {
             <a href="mailto:info@snowpondtech.com" className="flex items-center gap-2 hover:text-white">
               <Mail className="h-4 w-4" /> info@snowpondtech.com
             </a>
-            <p className="flex items-center gap-2 text-white/70">
+            <a
+              href="https://maps.app.goo.gl/NCfvNvNFQkLzEVcr6"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex items-center gap-2 text-white/70 hover:text-white"
+            >
               <MapPin className="h-4 w-4" /> Oakland, Maine
-            </p>
+            </a>
           </div>
           <div className="mt-6">
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white/60">Follow us</h4>
