@@ -128,23 +128,6 @@ function BusinessCommunicationsPage() {
         <></>
       </PageHero>
 
-      <section className="py-16 lg:py-20">
-        <div className="container-page max-w-3xl">
-          <p className="text-lg leading-relaxed text-foreground">
-            Communication is the backbone of every successful business. Whether
-            you're coordinating technicians, managing multiple job sites,
-            supporting remote employees, or answering customer calls, your
-            communication systems need to be reliable, flexible, and easy to use.
-          </p>
-          <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Snow Pond Technology Group helps businesses across Central and
-            Southern Maine modernize their phone and communication systems so
-            employees can stay productive and customers can reach you when it
-            matters most.
-          </p>
-        </div>
-      </section>
-
       <section className="py-16 bg-brand-soft/40 border-y border-border">
         <div className="container-page">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
