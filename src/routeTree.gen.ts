@@ -22,10 +22,7 @@ import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesBusinessCommunicationsRouteImport } from './routes/services.business-communications'
 import { Route as LocationsWatervilleRouteImport } from './routes/locations.waterville'
 import { Route as LocationsPortlandRouteImport } from './routes/locations.portland'
-import { Route as LocationsNewportRouteImport } from './routes/locations.newport'
 import { Route as LocationsLewistonRouteImport } from './routes/locations.lewiston'
-import { Route as LocationsBrunswickRouteImport } from './routes/locations.brunswick'
-import { Route as LocationsBiddefordRouteImport } from './routes/locations.biddeford'
 import { Route as LocationsBangorRouteImport } from './routes/locations.bangor'
 import { Route as LocationsAugustaRouteImport } from './routes/locations.augusta'
 import { Route as LocationsAuburnRouteImport } from './routes/locations.auburn'
@@ -103,24 +100,9 @@ const LocationsPortlandRoute = LocationsPortlandRouteImport.update({
   path: '/portland',
   getParentRoute: () => LocationsRoute,
 } as any)
-const LocationsNewportRoute = LocationsNewportRouteImport.update({
-  id: '/newport',
-  path: '/newport',
-  getParentRoute: () => LocationsRoute,
-} as any)
 const LocationsLewistonRoute = LocationsLewistonRouteImport.update({
   id: '/lewiston',
   path: '/lewiston',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const LocationsBrunswickRoute = LocationsBrunswickRouteImport.update({
-  id: '/brunswick',
-  path: '/brunswick',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const LocationsBiddefordRoute = LocationsBiddefordRouteImport.update({
-  id: '/biddeford',
-  path: '/biddeford',
   getParentRoute: () => LocationsRoute,
 } as any)
 const LocationsBangorRoute = LocationsBangorRouteImport.update({
@@ -200,10 +182,7 @@ export interface FileRoutesByFullPath {
   '/locations/auburn': typeof LocationsAuburnRoute
   '/locations/augusta': typeof LocationsAugustaRoute
   '/locations/bangor': typeof LocationsBangorRoute
-  '/locations/biddeford': typeof LocationsBiddefordRoute
-  '/locations/brunswick': typeof LocationsBrunswickRoute
   '/locations/lewiston': typeof LocationsLewistonRoute
-  '/locations/newport': typeof LocationsNewportRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
@@ -228,10 +207,7 @@ export interface FileRoutesByTo {
   '/locations/auburn': typeof LocationsAuburnRoute
   '/locations/augusta': typeof LocationsAugustaRoute
   '/locations/bangor': typeof LocationsBangorRoute
-  '/locations/biddeford': typeof LocationsBiddefordRoute
-  '/locations/brunswick': typeof LocationsBrunswickRoute
   '/locations/lewiston': typeof LocationsLewistonRoute
-  '/locations/newport': typeof LocationsNewportRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
@@ -258,10 +234,7 @@ export interface FileRoutesById {
   '/locations/auburn': typeof LocationsAuburnRoute
   '/locations/augusta': typeof LocationsAugustaRoute
   '/locations/bangor': typeof LocationsBangorRoute
-  '/locations/biddeford': typeof LocationsBiddefordRoute
-  '/locations/brunswick': typeof LocationsBrunswickRoute
   '/locations/lewiston': typeof LocationsLewistonRoute
-  '/locations/newport': typeof LocationsNewportRoute
   '/locations/portland': typeof LocationsPortlandRoute
   '/locations/waterville': typeof LocationsWatervilleRoute
   '/services/business-communications': typeof ServicesBusinessCommunicationsRoute
@@ -289,10 +262,7 @@ export interface FileRouteTypes {
     | '/locations/auburn'
     | '/locations/augusta'
     | '/locations/bangor'
-    | '/locations/biddeford'
-    | '/locations/brunswick'
     | '/locations/lewiston'
-    | '/locations/newport'
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
@@ -317,10 +287,7 @@ export interface FileRouteTypes {
     | '/locations/auburn'
     | '/locations/augusta'
     | '/locations/bangor'
-    | '/locations/biddeford'
-    | '/locations/brunswick'
     | '/locations/lewiston'
-    | '/locations/newport'
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
@@ -346,10 +313,7 @@ export interface FileRouteTypes {
     | '/locations/auburn'
     | '/locations/augusta'
     | '/locations/bangor'
-    | '/locations/biddeford'
-    | '/locations/brunswick'
     | '/locations/lewiston'
-    | '/locations/newport'
     | '/locations/portland'
     | '/locations/waterville'
     | '/services/business-communications'
@@ -461,32 +425,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationsPortlandRouteImport
       parentRoute: typeof LocationsRoute
     }
-    '/locations/newport': {
-      id: '/locations/newport'
-      path: '/newport'
-      fullPath: '/locations/newport'
-      preLoaderRoute: typeof LocationsNewportRouteImport
-      parentRoute: typeof LocationsRoute
-    }
     '/locations/lewiston': {
       id: '/locations/lewiston'
       path: '/lewiston'
       fullPath: '/locations/lewiston'
       preLoaderRoute: typeof LocationsLewistonRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/locations/brunswick': {
-      id: '/locations/brunswick'
-      path: '/brunswick'
-      fullPath: '/locations/brunswick'
-      preLoaderRoute: typeof LocationsBrunswickRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/locations/biddeford': {
-      id: '/locations/biddeford'
-      path: '/biddeford'
-      fullPath: '/locations/biddeford'
-      preLoaderRoute: typeof LocationsBiddefordRouteImport
       parentRoute: typeof LocationsRoute
     }
     '/locations/bangor': {
@@ -590,10 +533,7 @@ interface LocationsRouteChildren {
   LocationsAuburnRoute: typeof LocationsAuburnRoute
   LocationsAugustaRoute: typeof LocationsAugustaRoute
   LocationsBangorRoute: typeof LocationsBangorRoute
-  LocationsBiddefordRoute: typeof LocationsBiddefordRoute
-  LocationsBrunswickRoute: typeof LocationsBrunswickRoute
   LocationsLewistonRoute: typeof LocationsLewistonRoute
-  LocationsNewportRoute: typeof LocationsNewportRoute
   LocationsPortlandRoute: typeof LocationsPortlandRoute
   LocationsWatervilleRoute: typeof LocationsWatervilleRoute
 }
@@ -602,10 +542,7 @@ const LocationsRouteChildren: LocationsRouteChildren = {
   LocationsAuburnRoute: LocationsAuburnRoute,
   LocationsAugustaRoute: LocationsAugustaRoute,
   LocationsBangorRoute: LocationsBangorRoute,
-  LocationsBiddefordRoute: LocationsBiddefordRoute,
-  LocationsBrunswickRoute: LocationsBrunswickRoute,
   LocationsLewistonRoute: LocationsLewistonRoute,
-  LocationsNewportRoute: LocationsNewportRoute,
   LocationsPortlandRoute: LocationsPortlandRoute,
   LocationsWatervilleRoute: LocationsWatervilleRoute,
 }
