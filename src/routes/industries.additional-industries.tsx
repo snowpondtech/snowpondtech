@@ -179,12 +179,6 @@ function AdditionalIndustriesPage() {
             <p className="mt-4 text-muted-foreground leading-relaxed">
               We help businesses implement practical technology solutions that reduce downtime, improve security, and support long-term growth — without unnecessary complexity or confusing technical jargon.
             </p>
-            <Link
-              to="/schedule-assessment"
-              className="mt-6 inline-flex items-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
-            >
-              Free Assessment
-            </Link>
           </div>
         </div>
       </section>
