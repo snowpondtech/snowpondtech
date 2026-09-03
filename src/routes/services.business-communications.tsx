@@ -277,26 +277,6 @@ function BusinessCommunicationsPage() {
               mobile workforce, or looking to improve communication across your
               organization, Snow Pond Technology Group can help.
             </p>
-            <div className="mt-6 space-y-3">
-              <a
-                href="tel:2076922415"
-                className="flex items-center gap-3 text-foreground hover:text-brand"
-              >
-                <PhoneCall className="h-5 w-5 text-brand" /> 207-692-2415
-              </a>
-              <a
-                href="mailto:info@snowpondtech.com"
-                className="flex items-center gap-3 text-foreground hover:text-brand"
-              >
-                <Mail className="h-5 w-5 text-brand" /> info@snowpondtech.com
-              </a>
-              <a
-                href="https://snowpondtech.com"
-                className="flex items-center gap-3 text-foreground hover:text-brand"
-              >
-                <MapPin className="h-5 w-5 text-brand" /> snowpondtech.com
-              </a>
-            </div>
             <div className="mt-6">
               <Link
                 to="/schedule-assessment"
