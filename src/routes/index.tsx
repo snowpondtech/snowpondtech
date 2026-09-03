@@ -76,20 +76,6 @@ function HomePage() {
               <p className="mt-6 max-w-2xl text-lg text-white/85">
                 Helping HVAC contractors, electrical contractors, landscaping companies, manufacturers, and engineering firms reduce downtime, strengthen cybersecurity, and support business growth.
               </p>
-              <div className="mt-9 flex flex-col sm:flex-row gap-3">
-                <Link
-                  to="/schedule-assessment"
-                  className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3.5 text-sm font-semibold text-brand-deep hover:bg-white/90"
-                >
-                  Free Assessment <ArrowRight className="h-4 w-4" />
-                </Link>
-                <a
-                  href="tel:2076922415"
-                  className="inline-flex items-center justify-center rounded-md border border-white/30 px-6 py-3.5 text-sm font-semibold text-white hover:bg-white/10"
-                >
-                  Talk With an IT Expert · 207-692-2415
-                </a>
-              </div>
               <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl">
                 {[
                   ["Locally owned", "Based in Oakland, ME"],
