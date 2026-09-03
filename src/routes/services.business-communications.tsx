@@ -7,10 +7,7 @@ import {
   CloudSun,
   Factory,
   Fan,
-  Mail,
-  MapPin,
   Phone,
-  PhoneCall,
   ShieldCheck,
   Zap,
 } from "lucide-react";
