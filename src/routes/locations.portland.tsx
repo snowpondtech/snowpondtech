@@ -29,5 +29,5 @@ export const Route = createFileRoute("/locations/portland")({
     ],
     links: [{ rel: "canonical", href: "/locations/portland" }],
   }),
-  component: () => <LocationPage location={location} />,
+  component: () => <LocationPage location={location} media={portlandMedia} />,
 });
