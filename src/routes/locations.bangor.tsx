@@ -29,5 +29,5 @@ export const Route = createFileRoute("/locations/bangor")({
     ],
     links: [{ rel: "canonical", href: "/locations/bangor" }],
   }),
-  component: () => <LocationPage location={location} />,
+  component: () => <LocationPage location={location} media={bangorMedia} />,
 });
