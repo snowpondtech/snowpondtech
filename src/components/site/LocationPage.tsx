@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin } from "lucide-react";
 import { PageHero } from "./PageHero";
@@ -6,7 +7,7 @@ import type { Location } from "../../data/locations";
 import { LOCATIONS } from "../../data/locations";
 import { INDUSTRIES } from "../../data/industries";
 
-export function LocationPage({ location }: { location: Location }) {
+export function LocationPage({ location, media }: { location: Location; media?: ReactNode }) {
   const others = LOCATIONS.filter((l) => l.slug !== location.slug);
   return (
     <>
@@ -14,6 +15,7 @@ export function LocationPage({ location }: { location: Location }) {
         eyebrow={`${location.region} · Maine`}
         title={`IT Support and Managed Services in ${location.city}, Maine`}
         description={location.intro}
+        media={media}
       />
 
       <section className="py-20 lg:py-24">
