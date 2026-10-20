@@ -66,7 +66,7 @@ export function LocationPage({ location, media }: { location: Location; media?: 
               </p>
               <Link
                 to="/schedule-assessment"
-                className="mt-5 inline-flex items-center justify-center rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-brand-foreground hover:bg-brand-deep w-full"
+                className="mt-5 inline-flex items-center justify-center rounded-md bg-accent-warm px-4 py-2.5 text-sm font-semibold text-accent-warm-foreground ring-1 ring-accent-warm-deep/30 hover:bg-accent-warm-deep transition-colors w-full"
               >
                 Schedule Free Assessment
               </Link>

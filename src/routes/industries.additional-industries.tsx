@@ -253,7 +253,7 @@ function AdditionalIndustriesPage() {
             </p>
             <Link
               to="/schedule-assessment"
-              className="mt-6 inline-flex items-center rounded-md bg-brand px-5 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
+              className="mt-6 inline-flex items-center rounded-md bg-accent-warm px-5 py-3 text-sm font-semibold text-accent-warm-foreground ring-1 ring-accent-warm-deep/30 hover:bg-accent-warm-deep transition-colors"
             >
               Free Assessment
             </Link>
