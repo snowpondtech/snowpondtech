@@ -9,63 +9,33 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ServicesRouteImport } from './routes/services'
-import { Route as ScheduleAssessmentRouteImport } from './routes/schedule-assessment'
-import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
-import { Route as LocationsRouteImport } from './routes/locations'
-import { Route as IndustriesRouteImport } from './routes/industries'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as IndustriesRouteImport } from './routes/industries'
+import { Route as LocationsRouteImport } from './routes/locations'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as ScheduleAssessmentRouteImport } from './routes/schedule-assessment'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as IndustriesAdditionalIndustriesRouteImport } from './routes/industries.additional-industries'
+import { Route as IndustriesElectricalContractorsRouteImport } from './routes/industries.electrical-contractors'
+import { Route as IndustriesEngineeringFirmsRouteImport } from './routes/industries.engineering-firms'
+import { Route as IndustriesGeneralContractorsRouteImport } from './routes/industries.general-contractors'
+import { Route as IndustriesHvacContractorsRouteImport } from './routes/industries.hvac-contractors'
+import { Route as IndustriesLandscapingContractorsRouteImport } from './routes/industries.landscaping-contractors'
+import { Route as IndustriesManufacturingRouteImport } from './routes/industries.manufacturing'
+import { Route as LocationsAugustaRouteImport } from './routes/locations.augusta'
+import { Route as LocationsBangorRouteImport } from './routes/locations.bangor'
+import { Route as LocationsLewistonAuburnRouteImport } from './routes/locations.lewiston-auburn'
+import { Route as LocationsPortlandRouteImport } from './routes/locations.portland'
+import { Route as LocationsWatervilleRouteImport } from './routes/locations.waterville'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesBusinessCommunicationsRouteImport } from './routes/services.business-communications'
-import { Route as LocationsWatervilleRouteImport } from './routes/locations.waterville'
-import { Route as LocationsPortlandRouteImport } from './routes/locations.portland'
-import { Route as LocationsLewistonAuburnRouteImport } from './routes/locations.lewiston-auburn'
-import { Route as LocationsBangorRouteImport } from './routes/locations.bangor'
-import { Route as LocationsAugustaRouteImport } from './routes/locations.augusta'
-import { Route as IndustriesManufacturingRouteImport } from './routes/industries.manufacturing'
-import { Route as IndustriesLandscapingContractorsRouteImport } from './routes/industries.landscaping-contractors'
-import { Route as IndustriesHvacContractorsRouteImport } from './routes/industries.hvac-contractors'
-import { Route as IndustriesGeneralContractorsRouteImport } from './routes/industries.general-contractors'
-import { Route as IndustriesEngineeringFirmsRouteImport } from './routes/industries.engineering-firms'
-import { Route as IndustriesElectricalContractorsRouteImport } from './routes/industries.electrical-contractors'
-import { Route as IndustriesAdditionalIndustriesRouteImport } from './routes/industries.additional-industries'
 
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ScheduleAssessmentRoute = ScheduleAssessmentRouteImport.update({
-  id: '/schedule-assessment',
-  path: '/schedule-assessment',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
-  id: '/privacy-policy',
-  path: '/privacy-policy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LocationsRoute = LocationsRouteImport.update({
-  id: '/locations',
-  path: '/locations',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const IndustriesRoute = IndustriesRouteImport.update({
-  id: '/industries',
-  path: '/industries',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -73,10 +43,106 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesRoute = IndustriesRouteImport.update({
+  id: '/industries',
+  path: '/industries',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LocationsRoute = LocationsRouteImport.update({
+  id: '/locations',
+  path: '/locations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScheduleAssessmentRoute = ScheduleAssessmentRouteImport.update({
+  id: '/schedule-assessment',
+  path: '/schedule-assessment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndustriesAdditionalIndustriesRoute =
+  IndustriesAdditionalIndustriesRouteImport.update({
+    id: '/additional-industries',
+    path: '/additional-industries',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesElectricalContractorsRoute =
+  IndustriesElectricalContractorsRouteImport.update({
+    id: '/electrical-contractors',
+    path: '/electrical-contractors',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesEngineeringFirmsRoute =
+  IndustriesEngineeringFirmsRouteImport.update({
+    id: '/engineering-firms',
+    path: '/engineering-firms',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesGeneralContractorsRoute =
+  IndustriesGeneralContractorsRouteImport.update({
+    id: '/general-contractors',
+    path: '/general-contractors',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesHvacContractorsRoute =
+  IndustriesHvacContractorsRouteImport.update({
+    id: '/hvac-contractors',
+    path: '/hvac-contractors',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesLandscapingContractorsRoute =
+  IndustriesLandscapingContractorsRouteImport.update({
+    id: '/landscaping-contractors',
+    path: '/landscaping-contractors',
+    getParentRoute: () => IndustriesRoute,
+  } as any)
+const IndustriesManufacturingRoute = IndustriesManufacturingRouteImport.update({
+  id: '/manufacturing',
+  path: '/manufacturing',
+  getParentRoute: () => IndustriesRoute,
+} as any)
+const LocationsAugustaRoute = LocationsAugustaRouteImport.update({
+  id: '/augusta',
+  path: '/augusta',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsBangorRoute = LocationsBangorRouteImport.update({
+  id: '/bangor',
+  path: '/bangor',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsLewistonAuburnRoute = LocationsLewistonAuburnRouteImport.update({
+  id: '/lewiston-auburn',
+  path: '/lewiston-auburn',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsPortlandRoute = LocationsPortlandRouteImport.update({
+  id: '/portland',
+  path: '/portland',
+  getParentRoute: () => LocationsRoute,
+} as any)
+const LocationsWatervilleRoute = LocationsWatervilleRouteImport.update({
+  id: '/waterville',
+  path: '/waterville',
+  getParentRoute: () => LocationsRoute,
 } as any)
 const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/',
@@ -88,72 +154,6 @@ const ServicesBusinessCommunicationsRoute =
     id: '/business-communications',
     path: '/business-communications',
     getParentRoute: () => ServicesRoute,
-  } as any)
-const LocationsWatervilleRoute = LocationsWatervilleRouteImport.update({
-  id: '/waterville',
-  path: '/waterville',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const LocationsPortlandRoute = LocationsPortlandRouteImport.update({
-  id: '/portland',
-  path: '/portland',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const LocationsLewistonAuburnRoute = LocationsLewistonAuburnRouteImport.update({
-  id: '/lewiston-auburn',
-  path: '/lewiston-auburn',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const LocationsBangorRoute = LocationsBangorRouteImport.update({
-  id: '/bangor',
-  path: '/bangor',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const LocationsAugustaRoute = LocationsAugustaRouteImport.update({
-  id: '/augusta',
-  path: '/augusta',
-  getParentRoute: () => LocationsRoute,
-} as any)
-const IndustriesManufacturingRoute = IndustriesManufacturingRouteImport.update({
-  id: '/manufacturing',
-  path: '/manufacturing',
-  getParentRoute: () => IndustriesRoute,
-} as any)
-const IndustriesLandscapingContractorsRoute =
-  IndustriesLandscapingContractorsRouteImport.update({
-    id: '/landscaping-contractors',
-    path: '/landscaping-contractors',
-    getParentRoute: () => IndustriesRoute,
-  } as any)
-const IndustriesHvacContractorsRoute =
-  IndustriesHvacContractorsRouteImport.update({
-    id: '/hvac-contractors',
-    path: '/hvac-contractors',
-    getParentRoute: () => IndustriesRoute,
-  } as any)
-const IndustriesGeneralContractorsRoute =
-  IndustriesGeneralContractorsRouteImport.update({
-    id: '/general-contractors',
-    path: '/general-contractors',
-    getParentRoute: () => IndustriesRoute,
-  } as any)
-const IndustriesEngineeringFirmsRoute =
-  IndustriesEngineeringFirmsRouteImport.update({
-    id: '/engineering-firms',
-    path: '/engineering-firms',
-    getParentRoute: () => IndustriesRoute,
-  } as any)
-const IndustriesElectricalContractorsRoute =
-  IndustriesElectricalContractorsRouteImport.update({
-    id: '/electrical-contractors',
-    path: '/electrical-contractors',
-    getParentRoute: () => IndustriesRoute,
-  } as any)
-const IndustriesAdditionalIndustriesRoute =
-  IndustriesAdditionalIndustriesRouteImport.update({
-    id: '/additional-industries',
-    path: '/additional-industries',
-    getParentRoute: () => IndustriesRoute,
   } as any)
 
 export interface FileRoutesByFullPath {
@@ -322,53 +322,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/schedule-assessment': {
-      id: '/schedule-assessment'
-      path: '/schedule-assessment'
-      fullPath: '/schedule-assessment'
-      preLoaderRoute: typeof ScheduleAssessmentRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy-policy': {
-      id: '/privacy-policy'
-      path: '/privacy-policy'
-      fullPath: '/privacy-policy'
-      preLoaderRoute: typeof PrivacyPolicyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/locations': {
-      id: '/locations'
-      path: '/locations'
-      fullPath: '/locations'
-      preLoaderRoute: typeof LocationsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/industries': {
-      id: '/industries'
-      path: '/industries'
-      fullPath: '/industries'
-      preLoaderRoute: typeof IndustriesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -378,12 +336,138 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/industries': {
+      id: '/industries'
+      path: '/industries'
+      fullPath: '/industries'
+      preLoaderRoute: typeof IndustriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/locations': {
+      id: '/locations'
+      path: '/locations'
+      fullPath: '/locations'
+      preLoaderRoute: typeof LocationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schedule-assessment': {
+      id: '/schedule-assessment'
+      path: '/schedule-assessment'
+      fullPath: '/schedule-assessment'
+      preLoaderRoute: typeof ScheduleAssessmentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/industries/additional-industries': {
+      id: '/industries/additional-industries'
+      path: '/additional-industries'
+      fullPath: '/industries/additional-industries'
+      preLoaderRoute: typeof IndustriesAdditionalIndustriesRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/electrical-contractors': {
+      id: '/industries/electrical-contractors'
+      path: '/electrical-contractors'
+      fullPath: '/industries/electrical-contractors'
+      preLoaderRoute: typeof IndustriesElectricalContractorsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/engineering-firms': {
+      id: '/industries/engineering-firms'
+      path: '/engineering-firms'
+      fullPath: '/industries/engineering-firms'
+      preLoaderRoute: typeof IndustriesEngineeringFirmsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/general-contractors': {
+      id: '/industries/general-contractors'
+      path: '/general-contractors'
+      fullPath: '/industries/general-contractors'
+      preLoaderRoute: typeof IndustriesGeneralContractorsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/hvac-contractors': {
+      id: '/industries/hvac-contractors'
+      path: '/hvac-contractors'
+      fullPath: '/industries/hvac-contractors'
+      preLoaderRoute: typeof IndustriesHvacContractorsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/landscaping-contractors': {
+      id: '/industries/landscaping-contractors'
+      path: '/landscaping-contractors'
+      fullPath: '/industries/landscaping-contractors'
+      preLoaderRoute: typeof IndustriesLandscapingContractorsRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/industries/manufacturing': {
+      id: '/industries/manufacturing'
+      path: '/manufacturing'
+      fullPath: '/industries/manufacturing'
+      preLoaderRoute: typeof IndustriesManufacturingRouteImport
+      parentRoute: typeof IndustriesRoute
+    }
+    '/locations/augusta': {
+      id: '/locations/augusta'
+      path: '/augusta'
+      fullPath: '/locations/augusta'
+      preLoaderRoute: typeof LocationsAugustaRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/bangor': {
+      id: '/locations/bangor'
+      path: '/bangor'
+      fullPath: '/locations/bangor'
+      preLoaderRoute: typeof LocationsBangorRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/lewiston-auburn': {
+      id: '/locations/lewiston-auburn'
+      path: '/lewiston-auburn'
+      fullPath: '/locations/lewiston-auburn'
+      preLoaderRoute: typeof LocationsLewistonAuburnRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/portland': {
+      id: '/locations/portland'
+      path: '/portland'
+      fullPath: '/locations/portland'
+      preLoaderRoute: typeof LocationsPortlandRouteImport
+      parentRoute: typeof LocationsRoute
+    }
+    '/locations/waterville': {
+      id: '/locations/waterville'
+      path: '/waterville'
+      fullPath: '/locations/waterville'
+      preLoaderRoute: typeof LocationsWatervilleRouteImport
+      parentRoute: typeof LocationsRoute
     }
     '/services/': {
       id: '/services/'
@@ -398,90 +482,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/services/business-communications'
       preLoaderRoute: typeof ServicesBusinessCommunicationsRouteImport
       parentRoute: typeof ServicesRoute
-    }
-    '/locations/waterville': {
-      id: '/locations/waterville'
-      path: '/waterville'
-      fullPath: '/locations/waterville'
-      preLoaderRoute: typeof LocationsWatervilleRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/locations/portland': {
-      id: '/locations/portland'
-      path: '/portland'
-      fullPath: '/locations/portland'
-      preLoaderRoute: typeof LocationsPortlandRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/locations/lewiston-auburn': {
-      id: '/locations/lewiston-auburn'
-      path: '/lewiston-auburn'
-      fullPath: '/locations/lewiston-auburn'
-      preLoaderRoute: typeof LocationsLewistonAuburnRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/locations/bangor': {
-      id: '/locations/bangor'
-      path: '/bangor'
-      fullPath: '/locations/bangor'
-      preLoaderRoute: typeof LocationsBangorRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/locations/augusta': {
-      id: '/locations/augusta'
-      path: '/augusta'
-      fullPath: '/locations/augusta'
-      preLoaderRoute: typeof LocationsAugustaRouteImport
-      parentRoute: typeof LocationsRoute
-    }
-    '/industries/manufacturing': {
-      id: '/industries/manufacturing'
-      path: '/manufacturing'
-      fullPath: '/industries/manufacturing'
-      preLoaderRoute: typeof IndustriesManufacturingRouteImport
-      parentRoute: typeof IndustriesRoute
-    }
-    '/industries/landscaping-contractors': {
-      id: '/industries/landscaping-contractors'
-      path: '/landscaping-contractors'
-      fullPath: '/industries/landscaping-contractors'
-      preLoaderRoute: typeof IndustriesLandscapingContractorsRouteImport
-      parentRoute: typeof IndustriesRoute
-    }
-    '/industries/hvac-contractors': {
-      id: '/industries/hvac-contractors'
-      path: '/hvac-contractors'
-      fullPath: '/industries/hvac-contractors'
-      preLoaderRoute: typeof IndustriesHvacContractorsRouteImport
-      parentRoute: typeof IndustriesRoute
-    }
-    '/industries/general-contractors': {
-      id: '/industries/general-contractors'
-      path: '/general-contractors'
-      fullPath: '/industries/general-contractors'
-      preLoaderRoute: typeof IndustriesGeneralContractorsRouteImport
-      parentRoute: typeof IndustriesRoute
-    }
-    '/industries/engineering-firms': {
-      id: '/industries/engineering-firms'
-      path: '/engineering-firms'
-      fullPath: '/industries/engineering-firms'
-      preLoaderRoute: typeof IndustriesEngineeringFirmsRouteImport
-      parentRoute: typeof IndustriesRoute
-    }
-    '/industries/electrical-contractors': {
-      id: '/industries/electrical-contractors'
-      path: '/electrical-contractors'
-      fullPath: '/industries/electrical-contractors'
-      preLoaderRoute: typeof IndustriesElectricalContractorsRouteImport
-      parentRoute: typeof IndustriesRoute
-    }
-    '/industries/additional-industries': {
-      id: '/industries/additional-industries'
-      path: '/additional-industries'
-      fullPath: '/industries/additional-industries'
-      preLoaderRoute: typeof IndustriesAdditionalIndustriesRouteImport
-      parentRoute: typeof IndustriesRoute
     }
   }
 }
