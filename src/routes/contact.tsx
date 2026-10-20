@@ -176,12 +176,6 @@ function ContactPage() {
                   src="https://www.google.com/maps?q=54+Main+St,+Ste+2B,+Oakland,+ME+04963&output=embed"
                 />
               </div>
-              <div className="p-5">
-                <p className="font-semibold text-foreground">Office location</p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  54 Main St, Ste 2B, Oakland, ME 04963
-                </p>
-              </div>
             </div>
             <div className="rounded-2xl border border-border bg-card p-6">
               <p className="font-semibold text-foreground">Mailing address</p>
