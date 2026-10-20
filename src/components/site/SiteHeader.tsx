@@ -130,7 +130,7 @@ export function SiteHeader() {
           </a>
           <Link
             to="/schedule-assessment"
-            className="inline-flex items-center rounded-md bg-accent-warm px-4 py-2 text-sm font-semibold text-accent-warm-foreground shadow-sm ring-1 ring-accent-warm-deep/30 hover:bg-accent-warm-deep transition-colors"
+            className="inline-flex items-center whitespace-nowrap rounded-md bg-accent-warm px-4 py-2 text-sm font-semibold text-accent-warm-foreground shadow-sm ring-1 ring-accent-warm-deep/30 hover:bg-accent-warm-deep transition-colors"
           >
             Free Assessment
           </Link>
