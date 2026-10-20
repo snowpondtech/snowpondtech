@@ -3,7 +3,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { Turnstile } from "../components/site/Turnstile";
 import { CheckCircle2 } from "lucide-react";
-import { useState } from "react";
+import { useTurnstileForm } from "../hooks/use-turnstile-form";
+import { Button } from "../components/ui/button";
 import assessmentImage from "../assets/TechnologyAssessment.png.asset.json";
 
 export const Route = createFileRoute("/schedule-assessment")({
@@ -31,7 +32,7 @@ export const Route = createFileRoute("/schedule-assessment")({
 });
 
 function SchedulePage() {
-  const [sent, setSent] = useState(false);
+  const { sent, busy, error, widgetVersion, setToken, submit } = useTurnstileForm("assessment");
 
   return (
     <>
@@ -68,17 +69,7 @@ function SchedulePage() {
               </div>
             ) : (
               <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const form = e.currentTarget;
-                  // Honeypot: bots fill hidden fields. Silently succeed to avoid signaling.
-                  const hp = (form.elements.namedItem("website") as HTMLInputElement | null)?.value;
-                  if (hp) {
-                    setSent(true);
-                    return;
-                  }
-                  setSent(true);
-                }}
+                onSubmit={submit}
                 className="grid gap-5"
               >
                 {/* Honeypot — hidden from users, tempting to bots */}
@@ -203,14 +194,16 @@ function SchedulePage() {
                   </label>
                 </div>
 
-                <Turnstile />
+                <Turnstile key={widgetVersion} action="assessment" onToken={setToken} />
+                {error && <p role="alert" className="text-sm text-destructive">{error}</p>}
 
-                <button
+                <Button
                   type="submit"
+                  disabled={busy}
                   className="mt-2 inline-flex items-center justify-center rounded-md bg-accent-warm px-6 py-3 text-sm font-semibold text-accent-warm-foreground ring-1 ring-accent-warm-deep/30 hover:bg-accent-warm-deep transition-colors"
                 >
-                  Schedule my free technology assessment
-                </button>
+                  {busy ? "Verifying…" : "Schedule my free technology assessment"}
+                </Button>
                 <p className="text-xs text-muted-foreground">
                   Prefer to talk? Call <a className="text-brand font-medium" href="tel:2076922415">207-692-2415</a>.
                 </p>
