@@ -18,8 +18,8 @@ const primaryNav = [
 
 const clientResources = [
   {
-    href: "https://snowpondtech.itclientportal.com/ClientPortal/Login.aspx",
-    label: "Client Portal",
+    href: "https://helpdesk.snowpondtech.com",
+    label: "Helpdesk Portal",
   },
   { href: "https://remote.snowpondtech.com", label: "Remote Support" },
   { href: "https://pay.snowpondtech.com", label: "Payment Portal" },
