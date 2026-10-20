@@ -1,14 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LocationPage } from "../components/site/LocationPage";
 import { getLocation } from "../data/locations";
-import bangorImage from "../assets/bangor-maine.jpg.asset.json";
 
 const location = getLocation("bangor")!;
 
 const bangorMedia = (
   <figure className="w-full">
     <img
-      src={bangorImage.url}
+      src={"/images/bangor-maine.jpg"}
       alt="Aerial view of downtown Bangor, Maine and the Penobscot River"
       className="w-full rounded-2xl shadow-lg"
     />

@@ -11,3 +11,5 @@
 
 - Search URL regression tests in `tests/` check the running site's sitemap, robots directive, and self-referencing page addresses using Python's standard library, so they require no extra application dependencies.
 - Both public inquiry forms call the shared Turnstile server function before showing success; verification fails closed and checks the widget action and approved hostnames, while the private key stays inside the server handler.
+
+- Site images use direct `/images/<filename>` paths served from `public/images`, rather than imported asset pointers, to keep references aligned with the public image directory.

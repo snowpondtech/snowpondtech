@@ -2,13 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { CTASection } from "../components/site/CTASection";
 import { LinkedInIcon } from "../components/site/SocialIcons";
-import ownerHeadshot from "@/assets/owner-headshot.jpg.asset.json";
-import badge365 from "@/assets/365-badge.png.asset.json";
-import midMaineChamber from "@/assets/midmaine-chamber-logo.png.asset.json";
-import kennebecValleyChamber from "@/assets/kennebec-valley-chamber-logo.png.asset.json";
-import asciiGroup from "@/assets/ascii-group-logo.png.asset.json";
-import nsitsp from "@/assets/nsitsp-logo.png.asset.json";
-import oaklandAerial from "@/assets/oakland-maine-aerial.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -35,10 +28,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const affiliations = [
-  { name: "Mid-Maine Chamber of Commerce", url: "https://www.midmainechamber.com/", logo: midMaineChamber },
-  { name: "Kennebec Valley Chamber of Commerce", url: "https://kennebecvalleychamber.com/", logo: kennebecValleyChamber },
-  { name: "The ASCII Group", url: "https://www.ascii.com/", logo: asciiGroup },
-  { name: "National Society of IT Service Providers", url: "https://nsitsp.org/", logo: nsitsp },
+  { name: "Mid-Maine Chamber of Commerce", url: "https://www.midmainechamber.com/", logo: "/images/midmaine-chamber-logo.png" },
+  { name: "Kennebec Valley Chamber of Commerce", url: "https://kennebecvalleychamber.com/", logo: "/images/kennebec-valley-chamber-logo.png" },
+  { name: "The ASCII Group", url: "https://www.ascii.com/", logo: "/images/ascii-group-logo.png" },
+  { name: "National Society of IT Service Providers", url: "https://nsitsp.org/", logo: "/images/nsitsp-logo.png" },
 ];
 
 const coreValues = [
@@ -58,7 +51,7 @@ function AboutPage() {
         description="Snow Pond Technology Group is a locally owned company based in Oakland, Maine. We help contractors and manufacturers across Central and Southern Maine turn technology from a source of frustration into a competitive advantage."
         media={
           <img
-            src={oaklandAerial.url}
+            src={"/images/oakland-maine-aerial.jpg"}
             alt="Aerial view of downtown Oakland, Maine"
             className="w-full max-w-xl rounded-2xl shadow-xl object-cover"
           />
@@ -89,7 +82,7 @@ function AboutPage() {
             </div>
             <div className="mt-8 flex items-center gap-5 rounded-2xl border border-border bg-card p-5">
               <img
-                src={badge365.url}
+                src={"/images/365-badge.png"}
                 alt="365 Small Business Circle Member, United Way Kennebec Valley"
                 className="h-28 w-28 shrink-0 object-contain"
               />
@@ -101,7 +94,7 @@ function AboutPage() {
           </div>
           <div className="rounded-3xl border border-border bg-brand-soft/60 p-8 lg:p-10">
             <img
-              src={ownerHeadshot.url}
+              src={"/images/owner-headshot.jpg"}
               alt="Joshua Zukerman, owner of Snow Pond Technology Group"
               className="mx-auto h-64 w-64 rounded-2xl object-cover shadow-lg"
             />
@@ -194,7 +187,7 @@ function AboutPage() {
                 className="group flex flex-col items-center justify-center rounded-2xl border border-border bg-card p-6 transition-colors hover:border-brand/40 hover:bg-brand-soft/40"
               >
                 <img
-                  src={a.logo.url}
+                  src={a.logo}
                   alt={`${a.name} logo`}
                   className="h-20 w-full object-contain"
                   loading="lazy"

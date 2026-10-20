@@ -16,7 +16,6 @@ import {
 } from "lucide-react";
 import { CTASection } from "../components/site/CTASection";
 import { INDUSTRIES } from "../data/industries";
-import heroAsset from "../assets/Hero-Image-2.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -94,7 +93,7 @@ function HomePage() {
             </div>
             <div className="relative">
               <img
-                src={heroAsset.url}
+                src={"/images/Hero-Image-2.png"}
                 alt="Contractor using a tablet with project management software at a Maine construction site"
                 width={1200}
                 height={800}

@@ -5,7 +5,6 @@ import { Turnstile } from "../components/site/Turnstile";
 import { CheckCircle2 } from "lucide-react";
 import { useTurnstileForm } from "../hooks/use-turnstile-form";
 import { Button } from "../components/ui/button";
-import assessmentImage from "../assets/TechnologyAssessment.png.asset.json";
 
 export const Route = createFileRoute("/schedule-assessment")({
   head: () => ({
@@ -42,7 +41,7 @@ function SchedulePage() {
         description="A 30-minute conversation with a Maine-based advisor — no sales pressure, no jargon. Walk away with a clear picture of where your technology is helping (and where it's holding you back)."
         media={
           <img
-            src={assessmentImage.url}
+            src={"/images/TechnologyAssessment.png"}
             alt="Technology assessment checklist with IT security, network, and cloud review items on a desk with laptop and network equipment"
             className="w-3/4 mx-auto rounded-2xl shadow-xl aspect-[16/9] object-cover"
           />

@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { IndustryPage } from "../components/site/IndustryPage";
 import { getIndustry } from "../data/industries";
-import manufacturingImage from "../assets/ManufacturingContractors.png.asset.json";
 
 const industry = getIndustry("manufacturing")!;
 
@@ -21,7 +20,7 @@ export const Route = createFileRoute("/industries/manufacturing")({
   component: () => (
     <IndustryPage
       industry={industry}
-      image={manufacturingImage.url}
+      image={"/images/ManufacturingContractors.png"}
       imageAlt="Manufacturing team reviewing production plans on a tablet in a precision machine shop"
       imageHeading="Built for modern manufacturers"
       imageSubheading="Technology that keeps production running"
