@@ -110,7 +110,7 @@ function SchedulePage() {
                       name="industry"
                       required
                       defaultValue=""
-                      className="h-11 rounded-md border border-input bg-background px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
+                      className="h-11 rounded-md border border-field-border bg-field px-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand"
                     >
                       <option value="" disabled>Select an industry</option>
                       <option>HVAC Contractor</option>
@@ -131,7 +131,7 @@ function SchedulePage() {
                       name="employees"
                       required
                       defaultValue=""
-                      className="h-11 rounded-md border border-input bg-background px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
+                      className="h-11 rounded-md border border-field-border bg-field px-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand"
                     >
                       <option value="" disabled>Select a range</option>
                       <option>1-10</option>
@@ -151,7 +151,7 @@ function SchedulePage() {
                     name="challenges"
                     rows={5}
                     required
-                    className="rounded-md border border-input bg-background p-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
+                    className="rounded-md border border-field-border bg-field p-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand"
                     placeholder="Downtime, cybersecurity, cyber insurance requirements, growth planning, communications — whatever's on your mind."
                   />
                 </div>
@@ -165,7 +165,7 @@ function SchedulePage() {
                     name="currentVendor"
                     required
                     defaultValue=""
-                    className="h-11 rounded-md border border-input bg-background px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
+                    className="h-11 rounded-md border border-field-border bg-field px-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand"
                   >
                     <option value="" disabled>Select an option</option>
                     <option value="Yes">Yes — we have an outside IT vendor</option>
@@ -181,7 +181,7 @@ function SchedulePage() {
                       id="consent"
                       name="consent"
                       required
-                      className="mt-0.5 h-4 w-4 rounded border-border text-brand focus:ring-brand"
+                      className="mt-0.5 h-4 w-4 rounded border-field-border text-brand focus:ring-brand"
                     />
                     <span>
                       I agree to the{" "}
@@ -237,7 +237,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="h-11 rounded-md border border-input bg-background px-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-brand"
+        className="h-11 rounded-md border border-field-border bg-field px-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-brand focus:ring-2 focus:ring-brand"
       />
     </div>
   );
