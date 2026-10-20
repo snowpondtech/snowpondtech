@@ -22,6 +22,7 @@ const clientResources = [
     label: "Client Portal",
   },
   { href: "https://remote.snowpondtech.com", label: "Remote Support" },
+  { href: "https://pay.snowpondtech.com", label: "Payment Portal" },
 ];
 
 export function SiteHeader() {
