@@ -12,11 +12,7 @@ declare global {
 }
 
 // Cloudflare Turnstile site key. Publishable — safe to ship in code.
-// Replace via VITE_TURNSTILE_SITE_KEY when a real key is provisioned.
-// Default is Cloudflare's official "always passes" test key.
-const SITE_KEY =
-  (import.meta.env.VITE_TURNSTILE_SITE_KEY as string | undefined) ||
-  "1x00000000000000000000AA";
+const SITE_KEY = "0x4AAAAAAFdvj5fW5HnBBsVQ";
 
 const SCRIPT_SRC =
   "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
@@ -49,9 +45,11 @@ function loadScript(): Promise<void> {
 
 export function Turnstile({
   onToken,
+  action,
   className,
 }: {
   onToken?: (token: string) => void;
+  action: "contact" | "assessment";
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -64,11 +62,14 @@ export function Turnstile({
         if (cancelled || !ref.current || !window.turnstile) return;
         widgetId.current = window.turnstile.render(ref.current, {
           sitekey: SITE_KEY,
+          action,
           callback: (token: string) => onToken?.(token),
+          "expired-callback": () => onToken?.(""),
+          "error-callback": () => onToken?.(""),
         });
       })
       .catch(() => {
-        /* silently ignore — form still submits, server-side verification optional */
+        onToken?.("");
       });
     return () => {
       cancelled = true;
@@ -80,7 +81,7 @@ export function Turnstile({
         }
       }
     };
-  }, [onToken]);
+  }, [onToken, action]);
 
   return <div ref={ref} className={className} />;
 }
