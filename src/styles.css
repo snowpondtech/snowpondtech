@@ -32,6 +32,8 @@
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
+  --color-field: var(--field);
+  --color-field-border: var(--field-border);
   --color-ring: var(--ring);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
@@ -72,6 +74,10 @@
   --destructive-foreground: oklch(0.99 0 0);
   --border: oklch(0.92 0.015 245);
   --input: oklch(0.92 0.015 245);
+  /* Form field surfaces: a light cool fill so the text-entry area reads
+     as an inset box against the white card, plus a clearly visible border. */
+  --field: oklch(0.962 0.014 245);
+  --field-border: oklch(0.72 0.028 250);
   --ring: oklch(0.48 0.13 245);
 }
 
