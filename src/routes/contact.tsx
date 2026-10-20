@@ -3,7 +3,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "../components/site/PageHero";
 import { Turnstile } from "../components/site/Turnstile";
 import { Building2, CheckCircle2, Clock, Mail, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
+import { useTurnstileForm } from "../hooks/use-turnstile-form";
+import { Button } from "../components/ui/button";
 
 
 export const Route = createFileRoute("/contact")({
@@ -31,7 +32,7 @@ export const Route = createFileRoute("/contact")({
 });
 
 function ContactPage() {
-  const [sent, setSent] = useState(false);
+  const { sent, busy, error, widgetVersion, setToken, submit } = useTurnstileForm("contact");
 
   return (
     <>
@@ -66,16 +67,7 @@ function ContactPage() {
               </div>
             ) : (
               <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const form = e.currentTarget;
-                  const hp = (form.elements.namedItem("website") as HTMLInputElement | null)?.value;
-                  if (hp) {
-                    setSent(true);
-                    return;
-                  }
-                  setSent(true);
-                }}
+                onSubmit={submit}
                 className="grid gap-5"
               >
                 {/* Honeypot — hidden from users, tempting to bots */}
@@ -135,13 +127,15 @@ function ContactPage() {
                     </span>
                   </label>
                 </div>
-                <Turnstile />
-                <button
+                <Turnstile key={widgetVersion} action="contact" onToken={setToken} />
+                {error && <p role="alert" className="text-sm text-destructive">{error}</p>}
+                <Button
                   type="submit"
+                  disabled={busy}
                   className="mt-2 inline-flex items-center justify-center rounded-md bg-brand px-6 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep"
                 >
-                  Send message
-                </button>
+                  {busy ? "Verifying…" : "Send message"}
+                </Button>
                 <p className="text-xs text-muted-foreground">
                   Prefer to talk? Call <a className="text-brand font-medium" href="tel:2076922415">207-692-2415</a>.
                 </p>
