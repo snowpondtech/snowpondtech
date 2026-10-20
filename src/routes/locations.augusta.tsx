@@ -21,13 +21,15 @@ const augustaMedia = (
 export const Route = createFileRoute("/locations/augusta")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "IT Support in Augusta, Maine " },
       { name: "description", content: " Snow Pond Technology Group|Local IT support and managed services for Augusta, Maine contractors and manufacturers. Reduce downtime, tighten cybersecurity, and grow with a Maine-based partner." },
       { property: "og:title", content: "IT Support in Augusta, Maine " },
       { property: "og:description", content: " Snow Pond Technology Group|Local IT support and managed services for Augusta, Maine contractors and manufacturers. Reduce downtime, tighten cybersecurity, and grow with a Maine-based partner." },
-      { property: "og:url", content: "/locations/augusta" },
+      { property: "og:url", content: "https://snowpondtech.com/locations/augusta" },
     ],
-    links: [{ rel: "canonical", href: "/locations/augusta" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/locations/augusta" }],
   }),
   component: () => <LocationPage location={location} media={augustaMedia} />,
 });

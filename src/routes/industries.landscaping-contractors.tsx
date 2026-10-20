@@ -8,13 +8,15 @@ const industry = getIndustry("landscaping-contractors")!;
 export const Route = createFileRoute("/industries/landscaping-contractors")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "IT Services for Landscaping Contractors in Maine " },
       { name: "description", content: " Snow Pond Technology Group|Reliable communications, cybersecurity, and business technology for Maine landscaping companies with seasonal crews and distributed teams." },
       { property: "og:title", content: "IT Services for Landscaping Contractors in Maine " },
       { property: "og:description", content: " Snow Pond Technology Group|Reliable communications, cybersecurity, and business technology for Maine landscaping companies with seasonal crews and distributed teams." },
-      { property: "og:url", content: "/industries/landscaping-contractors" },
+      { property: "og:url", content: "https://snowpondtech.com/industries/landscaping-contractors" },
     ],
-    links: [{ rel: "canonical", href: "/industries/landscaping-contractors" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/industries/landscaping-contractors" }],
   }),
   component: () => (
     <IndustryPage

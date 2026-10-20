@@ -21,6 +21,8 @@ import {
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "IT Services for Maine Contractors & Manufacturers | Snow Pond Technology Group" },
       {
         name: "description",
@@ -33,9 +35,9 @@ export const Route = createFileRoute("/services/")({
         content:
           "Keep your business running, protect it from cyber threats, support growth, and prepare for the unexpected — with a Maine-based technology partner.",
       },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: "https://snowpondtech.com/services" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/services" }],
   }),
   component: ServicesIndexPage,
 });

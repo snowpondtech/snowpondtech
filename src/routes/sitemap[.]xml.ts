@@ -3,7 +3,7 @@ import type {} from "@tanstack/react-start";
 import { INDUSTRIES } from "../data/industries";
 import { LOCATIONS } from "../data/locations";
 
-const BASE_URL = "";
+const BASE_URL = "https://snowpondtech.com";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {

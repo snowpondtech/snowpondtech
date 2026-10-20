@@ -7,6 +7,8 @@ const location = getLocation("lewiston-auburn")!;
 export const Route = createFileRoute("/locations/lewiston-auburn")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "IT Services in Lewiston-Auburn, Maine | Snow Pond Technology Group" },
       {
         name: "description",
@@ -19,9 +21,9 @@ export const Route = createFileRoute("/locations/lewiston-auburn")({
         content:
           "IT support, cybersecurity, and backup for Lewiston-Auburn, Maine manufacturers and contractors — from a Maine-owned partner.",
       },
-      { property: "og:url", content: "/locations/lewiston-auburn" },
+      { property: "og:url", content: "https://snowpondtech.com/locations/lewiston-auburn" },
     ],
-    links: [{ rel: "canonical", href: "/locations/lewiston-auburn" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/locations/lewiston-auburn" }],
   }),
   component: () => <LocationPage location={location} />,
 });

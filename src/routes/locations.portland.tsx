@@ -21,13 +21,15 @@ const portlandMedia = (
 export const Route = createFileRoute("/locations/portland")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "Managed IT Services in Portland, Maine " },
       { name: "description", content: " Snow Pond Technology Group|Managed IT, cybersecurity, and technology planning for Portland, Maine contractors and manufacturers scaling their business." },
       { property: "og:title", content: "Managed IT Services in Portland, Maine " },
       { property: "og:description", content: " Snow Pond Technology Group|Managed IT, cybersecurity, and technology planning for Portland, Maine contractors and manufacturers scaling their business." },
-      { property: "og:url", content: "/locations/portland" },
+      { property: "og:url", content: "https://snowpondtech.com/locations/portland" },
     ],
-    links: [{ rel: "canonical", href: "/locations/portland" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/locations/portland" }],
   }),
   component: () => <LocationPage location={location} media={portlandMedia} />,
 });

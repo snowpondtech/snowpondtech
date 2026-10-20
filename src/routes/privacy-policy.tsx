@@ -4,6 +4,7 @@ import { PageHero } from "../components/site/PageHero";
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
       { title: "Privacy Policy | Snow Pond Technology Group" },
       {
         name: "description",
@@ -16,10 +17,10 @@ export const Route = createFileRoute("/privacy-policy")({
         content:
           "Privacy policy for Snow Pond Technology Group.",
       },
-      { property: "og:url", content: "/privacy-policy" },
+      { property: "og:url", content: "https://snowpondtech.com/privacy-policy" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "/privacy-policy" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/privacy-policy" }],
   }),
   component: PrivacyPolicyPage,
 });
