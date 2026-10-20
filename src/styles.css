@@ -38,6 +38,8 @@
   --color-brand-deep: var(--brand-deep);
   --color-brand-soft: var(--brand-soft);
   --color-accent-warm: var(--accent-warm);
+  --color-accent-warm-deep: var(--accent-warm-deep);
+  --color-accent-warm-foreground: var(--accent-warm-foreground);
 }
 
 :root {
@@ -48,7 +50,9 @@
   --brand-foreground: oklch(0.99 0.005 240);
   --brand-deep: oklch(0.28 0.09 250);
   --brand-soft: oklch(0.96 0.02 240);
-  --accent-warm: oklch(0.72 0.15 55);
+  --accent-warm: oklch(0.78 0.15 70);
+  --accent-warm-deep: oklch(0.68 0.16 60);
+  --accent-warm-foreground: oklch(0.28 0.09 250);
 
   --background: oklch(1 0 0);
   --foreground: oklch(0.20 0.03 250);

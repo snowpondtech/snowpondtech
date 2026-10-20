@@ -280,7 +280,7 @@ function BusinessCommunicationsPage() {
             <div className="mt-6">
               <Link
                 to="/schedule-assessment"
-                className="inline-flex items-center justify-center gap-2 rounded-md bg-brand px-5 py-2.5 text-sm font-semibold text-brand-foreground hover:bg-brand-deep transition-colors"
+                className="inline-flex items-center justify-center gap-2 rounded-md bg-accent-warm px-5 py-2.5 text-sm font-semibold text-accent-warm-foreground ring-1 ring-accent-warm-deep/30 hover:bg-accent-warm-deep transition-colors"
               >
                 <CalendarCheck className="h-4 w-4" /> Free Assessment
               </Link>

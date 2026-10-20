@@ -131,7 +131,7 @@ export function SiteHeader() {
           </a>
           <Link
             to="/schedule-assessment"
-            className="inline-flex items-center rounded-md bg-brand px-4 py-2 text-sm font-semibold text-brand-foreground shadow-sm hover:bg-brand-deep transition-colors"
+            className="inline-flex items-center rounded-md bg-accent-warm px-4 py-2 text-sm font-semibold text-accent-warm-foreground shadow-sm ring-1 ring-accent-warm-deep/30 hover:bg-accent-warm-deep transition-colors"
           >
             Free Assessment
           </Link>
@@ -241,7 +241,7 @@ export function SiteHeader() {
             <Link
               to="/schedule-assessment"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex justify-center rounded-md bg-brand px-4 py-2.5 text-sm font-semibold text-brand-foreground"
+              className="mt-2 inline-flex justify-center rounded-md bg-accent-warm px-4 py-2.5 text-sm font-semibold text-accent-warm-foreground ring-1 ring-accent-warm-deep/30 hover:bg-accent-warm-deep transition-colors"
             >
               Free Assessment
             </Link>

@@ -16,7 +16,7 @@ export function CTASection({
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             to="/schedule-assessment"
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-white px-6 py-3 text-sm font-semibold text-brand-deep hover:bg-white/90"
+            className="inline-flex items-center justify-center gap-2 rounded-md bg-accent-warm px-6 py-3 text-sm font-semibold text-accent-warm-foreground shadow-md ring-1 ring-accent-warm-deep/30 hover:bg-accent-warm-deep transition-colors"
           >
             <CalendarCheck className="h-4 w-4" /> Get Your Free Assessment
           </Link>

@@ -206,7 +206,7 @@ function SchedulePage() {
 
                 <button
                   type="submit"
-                  className="mt-2 inline-flex items-center justify-center rounded-md bg-brand px-6 py-3 text-sm font-semibold text-brand-foreground hover:bg-brand-deep"
+                  className="mt-2 inline-flex items-center justify-center rounded-md bg-accent-warm px-6 py-3 text-sm font-semibold text-accent-warm-foreground ring-1 ring-accent-warm-deep/30 hover:bg-accent-warm-deep transition-colors"
                 >
                   Schedule my free technology assessment
                 </button>
