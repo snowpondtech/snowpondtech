@@ -9,6 +9,7 @@ import assessmentImage from "../assets/TechnologyAssessment.png.asset.json";
 export const Route = createFileRoute("/schedule-assessment")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
       { title: "Schedule a Free Technology Assessment | Snow Pond Technology Group" },
       {
         name: "description",
@@ -21,10 +22,10 @@ export const Route = createFileRoute("/schedule-assessment")({
         content:
           "Free 30-minute assessment for Maine contractors, manufacturers, and small businesses. No jargon, no pressure.",
       },
-      { property: "og:url", content: "/schedule-assessment" },
+      { property: "og:url", content: "https://snowpondtech.com/schedule-assessment" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "/schedule-assessment" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/schedule-assessment" }],
   }),
   component: SchedulePage,
 });

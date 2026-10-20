@@ -21,13 +21,15 @@ const bangorMedia = (
 export const Route = createFileRoute("/locations/bangor")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "Managed IT Services in Bangor, Maine " },
       { name: "description", content: " Snow Pond Technology Group|Managed IT, cybersecurity, and technology strategy for Bangor-area contractors and manufacturers." },
       { property: "og:title", content: "Managed IT Services in Bangor, Maine " },
       { property: "og:description", content: " Snow Pond Technology Group|Managed IT, cybersecurity, and technology strategy for Bangor-area contractors and manufacturers." },
-      { property: "og:url", content: "/locations/bangor" },
+      { property: "og:url", content: "https://snowpondtech.com/locations/bangor" },
     ],
-    links: [{ rel: "canonical", href: "/locations/bangor" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/locations/bangor" }],
   }),
   component: () => <LocationPage location={location} media={bangorMedia} />,
 });

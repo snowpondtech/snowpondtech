@@ -21,6 +21,8 @@ import heroAsset from "../assets/Hero-Image-2.png.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "Snow Pond Technology Group | IT for Maine Contractors & Manufacturers" },
       {
         name: "description",
@@ -33,9 +35,9 @@ export const Route = createFileRoute("/")({
         content:
           "Snow Pond Technology Group helps HVAC, electrical, landscaping, and manufacturing businesses across Central and Southern Maine reduce downtime, strengthen cybersecurity, and support growing teams.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://snowpondtech.com/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/" }],
   }),
   component: HomePage,
 });

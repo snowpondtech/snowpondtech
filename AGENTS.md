@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Search URL regression tests in `tests/` check the running site's sitemap, robots directive, and self-referencing page addresses using Python's standard library, so they require no extra application dependencies.

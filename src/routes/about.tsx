@@ -13,6 +13,8 @@ import oaklandAerial from "@/assets/oakland-maine-aerial.jpg.asset.json";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "About Snow Pond Technology Group | Maine-Owned IT Partner" },
       {
         name: "description",
@@ -25,9 +27,9 @@ export const Route = createFileRoute("/about")({
         content:
           "Locally owned in Oakland, Maine. A trusted technology advisor for contractors and manufacturers across Central and Southern Maine.",
       },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://snowpondtech.com/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/about" }],
   }),
   component: AboutPage,
 });

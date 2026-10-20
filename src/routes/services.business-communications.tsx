@@ -15,6 +15,8 @@ import {
 export const Route = createFileRoute("/services/business-communications")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       {
         title:
           "Business Communications for Maine Contractors & Manufacturers | Snow Pond Technology Group",
@@ -33,9 +35,9 @@ export const Route = createFileRoute("/services/business-communications")({
         content:
           "Modern phone systems, VoIP, and unified communications for Maine contractors and manufacturers. Keep office, field, and remote teams connected.",
       },
-      { property: "og:url", content: "/services/business-communications" },
+      { property: "og:url", content: "https://snowpondtech.com/services/business-communications" },
     ],
-    links: [{ rel: "canonical", href: "/services/business-communications" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/services/business-communications" }],
   }),
   component: BusinessCommunicationsPage,
 });

@@ -8,13 +8,15 @@ const industry = getIndustry("hvac-contractors")!;
 export const Route = createFileRoute("/industries/hvac-contractors")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "IT Services for HVAC Contractors in Maine " },
       { name: "description", content: " Snow Pond Technology Group|Managed IT, cybersecurity, and mobile workforce support built for Maine HVAC contractors. Keep dispatch, technicians, and the office moving as one." },
       { property: "og:title", content: "IT Services for HVAC Contractors in Maine " },
       { property: "og:description", content: " Snow Pond Technology Group|Managed IT, cybersecurity, and mobile workforce support built for Maine HVAC contractors. Keep dispatch, technicians, and the office moving as one." },
-      { property: "og:url", content: "/industries/hvac-contractors" },
+      { property: "og:url", content: "https://snowpondtech.com/industries/hvac-contractors" },
     ],
-    links: [{ rel: "canonical", href: "/industries/hvac-contractors" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/industries/hvac-contractors" }],
   }),
   component: () => (
     <IndustryPage

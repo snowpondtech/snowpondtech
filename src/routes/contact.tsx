@@ -9,6 +9,7 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
       { title: "Contact Snow Pond Technology Group | Maine IT Support" },
       {
         name: "description",
@@ -21,10 +22,10 @@ export const Route = createFileRoute("/contact")({
         content:
           "Call 207-692-2415 or send a message. Locally owned in Oakland, Maine — serving contractors and manufacturers across Central and Southern Maine.",
       },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: "https://snowpondtech.com/contact" },
       { name: "twitter:card", content: "summary" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/contact" }],
   }),
   component: ContactPage,
 });

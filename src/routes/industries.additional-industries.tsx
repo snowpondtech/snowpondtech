@@ -15,6 +15,8 @@ import additionalImage from "../assets/AdditionalIndustries.png.asset.json";
 export const Route = createFileRoute("/industries/additional-industries")({
   head: () => ({
     meta: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:type", content: "website" },
       { title: "Additional Industries We Serve | Snow Pond Technology Group" },
       {
         name: "description",
@@ -27,9 +29,9 @@ export const Route = createFileRoute("/industries/additional-industries")({
         content:
           "Practical technology solutions that reduce downtime, improve security, and support long-term growth for a wide range of Maine organizations.",
       },
-      { property: "og:url", content: "/industries/additional-industries" },
+      { property: "og:url", content: "https://snowpondtech.com/industries/additional-industries" },
     ],
-    links: [{ rel: "canonical", href: "/industries/additional-industries" }],
+    links: [{ rel: "canonical", href: "https://snowpondtech.com/industries/additional-industries" }],
   }),
   component: AdditionalIndustriesPage,
 });
