@@ -1,14 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LocationPage } from "../components/site/LocationPage";
 import { getLocation } from "../data/locations";
-import portlandImage from "../assets/portland-maine-skyline.jpg.asset.json";
 
 const location = getLocation("portland")!;
 
 const portlandMedia = (
   <figure className="w-full">
     <img
-      src={portlandImage.url}
+      src={"/images/portland-maine-skyline.jpg"}
       alt="Aerial view of the Portland, Maine skyline and waterfront"
       className="w-full rounded-2xl shadow-lg"
     />

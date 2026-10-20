@@ -1,14 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { LocationPage } from "../components/site/LocationPage";
 import { getLocation } from "../data/locations";
-import augustaImage from "../assets/augusta-maine-downtown.jpg.asset.json";
 
 const location = getLocation("augusta")!;
 
 const augustaMedia = (
   <figure className="w-full">
     <img
-      src={augustaImage.url}
+      src={"/images/augusta-maine-downtown.jpg"}
       alt="Aerial view of downtown Augusta, Maine and the Kennebec River"
       className="w-full rounded-2xl shadow-lg"
     />
